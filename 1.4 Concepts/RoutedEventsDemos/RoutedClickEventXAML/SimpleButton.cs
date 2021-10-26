@@ -37,9 +37,8 @@ namespace RoutedClickEvent
         protected override Size MeasureOverride(Size availableSize)
         {
             // Der SimpleButton soll mindestens 75 log. Einheiten breit und 23 hoch sein
-            Size desiredSize = new Size(75, 23);
-            UIElement child = this.Content as UIElement;
-            if (child != null)
+            var desiredSize = new Size(75, 23);
+            if (this.Content is UIElement child)
             {
                 // Ist das Kindelement breiter oder höher, wird der entsprechende Wert des Kindelements
                 // für die gewünschte Grösse des SimpleButton verwendet
