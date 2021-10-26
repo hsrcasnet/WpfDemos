@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using WpfDependencyApp.Services;
+using WpfDependencyApp.ViewModels;
 using WpfDependencyApp.Views;
 
 namespace WpfDependencyApp
@@ -27,7 +28,8 @@ namespace WpfDependencyApp
                 serviceCollection.AddSingleton<IEmployeeRepository, EmployeeRepositoryEF>();
             }
 
-            serviceCollection.AddSingleton<MainWindow>();
+            serviceCollection.AddScoped<MainViewModel>();
+            serviceCollection.AddScoped<MainWindow>();
 
             // Create DI container
             this.serviceProvider = serviceCollection.BuildServiceProvider();

@@ -7,7 +7,9 @@
     Height="450">
 
     <Grid>
-        <DataGrid Name="EmployeesDataGrid" AutoGenerateColumns="False">
+        <DataGrid Name="EmployeesDataGrid"
+                  ItemsSource="{Binding Employees}"
+                  AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Id}" Header="Id" />
                 <DataGridTextColumn Binding="{Binding FirstName}" Header="First Name" />
