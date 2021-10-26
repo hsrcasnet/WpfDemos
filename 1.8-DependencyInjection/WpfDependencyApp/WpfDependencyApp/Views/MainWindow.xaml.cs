@@ -1,7 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Linq;
 using System.Windows;
+using Microsoft.Extensions.Logging;
 using WpfDependencyApp.Services;
 
 namespace WpfDependencyApp.Views
