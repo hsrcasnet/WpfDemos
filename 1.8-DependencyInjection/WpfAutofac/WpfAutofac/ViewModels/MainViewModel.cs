@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.CommandWpf;
+using GalaSoft.MvvmLight.Command;
 using WpfAutofac.Services;
 
 namespace WpfAutofac.ViewModels
