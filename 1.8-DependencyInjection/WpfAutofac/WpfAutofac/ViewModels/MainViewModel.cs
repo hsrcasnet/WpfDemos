@@ -54,7 +54,7 @@ namespace WpfAutofac.ViewModels
                 this.loadingIndicatorService.ShowLoadingIndicator();
                 
                 // Call services here...
-                await Task.Delay(10000);
+                await Task.Delay(2000);
 
                 this.loadingIndicatorService.HideLoadingIndicator();
 
