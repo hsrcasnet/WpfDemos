@@ -1,0 +1,161 @@
+﻿<Window x:Class="BindToList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:local="clr-namespace:BindToList"
+        Title="MainWindow" Height="426" Width="525">
+
+    <Window.Resources>
+
+        <!-- Creates the local data source for binding -->
+        <local:People x:Key="people"/>
+        <local:PersonTemplateSelector x:Key="PersTemplateSel"/>
+
+ 
+        <!-- DataTemplate to use for displaying each Person item -->
+        <DataTemplate x:Key="childrenTemplate">
+            <Border 
+                Padding="4" Background="Pink"
+                Margin="4" 
+                Height="Auto"
+                Width="Auto">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel>
+                        <TextBlock
+                            Text="First Name" />
+                        <TextBlock 
+                
+                            Text="{Binding Path=FirstName}"/>
+
+                        <TextBlock 
+                    
+                            Text="Last Name" />
+                        <TextBlock 
+                          
+                            Text="{Binding Path=LastName}" />
+
+                        <TextBlock 
+                           
+                            Text="Age" />
+                        <TextBlock 
+                           
+                            Text="{Binding Path=Age}" />
+                    </StackPanel>
+
+
+                </Grid>
+            </Border>
+        </DataTemplate>
+        <DataTemplate x:Key="adultTemplate">
+            <Border
+                BorderThickness="1" 
+                BorderBrush="Red" Background="Red"
+                Padding="4"
+                Margin="4" 
+                Height="Auto"
+                Width="Auto">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel>
+                        <TextBlock
+                            Text="First Name" />
+                        <TextBlock 
+                
+                            Text="{Binding Path=FirstName}"/>
+
+                        <TextBlock 
+                    
+                            Text="Last Name" />
+                        <TextBlock 
+                          
+                            Text="{Binding Path=LastName}" />
+
+                        <TextBlock 
+                           
+                            Text="Age" />
+                        <TextBlock 
+                           
+                            Text="{Binding Path=Age}" />
+                    </StackPanel>
+
+
+                </Grid>
+            </Border>
+        </DataTemplate>
+        <DataTemplate x:Key="retiredTemplate">
+            <Border
+               Background="Gray"
+                Padding="4"
+                Margin="4" 
+                Height="Auto"
+                Width="Auto">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel>
+                        <TextBlock
+                            Text="First Name" />
+                        <TextBlock 
+                
+                            Text="{Binding Path=FirstName}"/>
+
+                        <TextBlock 
+                    
+                            Text="Last Name" />
+                        <TextBlock 
+                          
+                            Text="{Binding Path=LastName}" />
+
+                        <TextBlock 
+                           
+                            Text="Age" />
+                        <TextBlock 
+                           
+                            Text="{Binding Path=Age}" />
+                    </StackPanel>
+
+
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </Window.Resources>
+
+
+        <!-- The ListBox binds to the people collection, and sets the -->
+        <!-- DataTemplate to use for displaying each item -->
+        <!--<ListBox
+            Margin="10"
+            ItemsSource="{Binding Source={StaticResource people}}"
+            ItemTemplate="{StaticResource personTemplate}"/>-->
+
+        <!-- Without specifying a DataTemplate, the ListBox just -->
+        <!-- displays a list of names. -->
+        <DockPanel DataContext="{StaticResource people}" >
+            <ListBox  Margin="5" DockPanel.Dock="Left"
+            ItemsSource="{Binding}" 
+                      ItemTemplateSelector="{StaticResource PersTemplateSel}"
+                      IsSynchronizedWithCurrentItem="True"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Name" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,5,0"/>
+            <TextBox Text="{Binding LastName}" Grid.Row="0" Grid.Column="1" Margin="5"/>
+        </Grid>
+        </DockPanel>
+</Window>

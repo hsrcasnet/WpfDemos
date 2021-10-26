@@ -1,0 +1,16 @@
+﻿<Window x:Class="RoutedClickEvent.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:RoutedClickEvent"
+    Title="Window1" Height="300" Width="400">
+
+    <!--  Click event of SimpleButton is used as an Attached Event on a StackPanel -->
+    <StackPanel local:SimpleButton.Click="StackPanel_SimpleButton_Click">
+        <local:SimpleButton Content="Yes" Click="SimpleButton_Click_Yes"/>
+        <local:SimpleButton Content="No" Click="SimpleButton_Click_No"/>
+        <local:SimpleButton Content="Cancel" Click="SimpleButton_Click_Cancel"/>
+
+        <!--Debug Output-->
+        <TextBlock x:Name="DebugOutput" Text="Debug Output:" FontFamily="Courier New" Margin="10" />
+    </StackPanel>
+</Window>

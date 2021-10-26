@@ -1,0 +1,11 @@
+﻿<Window x:Class="CustomAttachedProperties1.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:CustomAttachedProperties1"
+    Title="Attached Properties" SizeToContent="WidthAndHeight">
+	  <local:SimpleCanvas Background="Lime" x:Name="canvas">
+		 <Button Content="Button1" Width="100" Height="30"/>
+		 <Button Content="Button2" local:SimpleCanvas.Left="200" local:SimpleCanvas.Top="10"/>
+		 <TextBox Text="Canvas" local:SimpleCanvas.Left="50" local:SimpleCanvas.Top="70"/>
+		</local:SimpleCanvas>
+</Window>

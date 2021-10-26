@@ -1,0 +1,15 @@
+﻿<Window x:Class="_01_UserControl.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:_01_UserControl"
+    Title="01-UserControl" Height="300" Width="500">
+    <StackPanel>
+        <ItemsControl DockPanel.Dock="Left" ItemsSource="{Binding}" DataContext="{Binding}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                   <my:MyOwnUserControl DataContext="{Binding}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </StackPanel>
+</Window>

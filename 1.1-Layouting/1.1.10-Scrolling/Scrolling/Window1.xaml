@@ -1,0 +1,13 @@
+﻿<Window x:Class="Scrolling.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window1" Height="150" Width="300">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" >
+        <StackPanel >
+            <Button Margin="5" Content="One" />
+            <Button Margin="5" Content="Two" />
+            <Button Margin="5" Content="Three" />
+            <TextBox Margin="5" Width="330" Height="150" />
+        </StackPanel>
+    </ScrollViewer>
+</Window>

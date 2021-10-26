@@ -1,0 +1,11 @@
+﻿<Window x:Class="RoutedCommandExample.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="DelegateCommandExample" Height="100" Width="300">
+
+    <StackPanel>
+        <Button Content="Cook Dinner"
+                Command="{Binding CookDinnerCommand}"
+                CommandParameter="Pizza"/>
+    </StackPanel>
+</Window>

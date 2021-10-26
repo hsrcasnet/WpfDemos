@@ -1,0 +1,16 @@
+﻿<Window
+    x:Class="WpfResourceDict.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Color x:Key="ColorRed" A="255" R="255" G="0" B="0" />
+            <Color x:Key="ColorBlue" A="255" R="0" G="0" B="255" />
+            <SolidColorBrush x:Key="SolidColorBrushRed" Color="{StaticResource ColorRed}"/>
+            <SolidColorBrush x:Key="SolidColorBrushBlue" Color="{StaticResource ColorBlue}"/>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid >
+        <Button Background="{StaticResource SolidColorBrushBlue}">Red Button</Button>
+    </Grid>
+</Window>

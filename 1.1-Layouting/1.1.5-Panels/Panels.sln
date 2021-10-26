@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackPanel", "StackPanel\StackPanel.csproj", "{1AC62938-37C8-4EEF-8156-EC0B0C321284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockPanel", "DockPanel\DockPanel.csproj", "{21C2AB64-1E67-4D34-B35A-308BAB504DC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WrapPanel", "WrapPanel\WrapPanel.csproj", "{C75984A8-D3F5-4544-97AA-C0B75A9BB1B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grid-NoDefinition", "Grid\Grid-NoDefinition.csproj", "{D2764999-F508-4B7C-9996-B9C2BC6DD254}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridWithDefinition", "GridWithDefinition\GridWithDefinition.csproj", "{29E3A3FE-2710-42E5-83F4-7B456E6FF19F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridSplitter", "GridSplitter\GridSplitter.csproj", "{FEC8DD61-831D-450E-8089-23D984E34AE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Canvas", "Canvas\Canvas.csproj", "{6378781F-7D4D-4E5F-9FCF-AF3DF8305E90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AC62938-37C8-4EEF-8156-EC0B0C321284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AC62938-37C8-4EEF-8156-EC0B0C321284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AC62938-37C8-4EEF-8156-EC0B0C321284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AC62938-37C8-4EEF-8156-EC0B0C321284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21C2AB64-1E67-4D34-B35A-308BAB504DC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21C2AB64-1E67-4D34-B35A-308BAB504DC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21C2AB64-1E67-4D34-B35A-308BAB504DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21C2AB64-1E67-4D34-B35A-308BAB504DC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C75984A8-D3F5-4544-97AA-C0B75A9BB1B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C75984A8-D3F5-4544-97AA-C0B75A9BB1B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C75984A8-D3F5-4544-97AA-C0B75A9BB1B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C75984A8-D3F5-4544-97AA-C0B75A9BB1B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2764999-F508-4B7C-9996-B9C2BC6DD254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2764999-F508-4B7C-9996-B9C2BC6DD254}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2764999-F508-4B7C-9996-B9C2BC6DD254}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2764999-F508-4B7C-9996-B9C2BC6DD254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29E3A3FE-2710-42E5-83F4-7B456E6FF19F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E3A3FE-2710-42E5-83F4-7B456E6FF19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E3A3FE-2710-42E5-83F4-7B456E6FF19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E3A3FE-2710-42E5-83F4-7B456E6FF19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEC8DD61-831D-450E-8089-23D984E34AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEC8DD61-831D-450E-8089-23D984E34AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEC8DD61-831D-450E-8089-23D984E34AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEC8DD61-831D-450E-8089-23D984E34AE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6378781F-7D4D-4E5F-9FCF-AF3DF8305E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6378781F-7D4D-4E5F-9FCF-AF3DF8305E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6378781F-7D4D-4E5F-9FCF-AF3DF8305E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6378781F-7D4D-4E5F-9FCF-AF3DF8305E90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

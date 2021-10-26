@@ -1,0 +1,17 @@
+﻿<Application x:Class="WpfValueConversion.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:WpfValueConversion.Converters"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         <ResourceDictionary>
+
+             <converters:DateTimeToBoolConverter x:Key="DateTimeToBoolConverter" />
+
+             <converters:DatetimeToStringConverter x:Key="DatetimeToStringConverter" />
+
+             <converters:DebugConverter x:Key="DebugConverter" />
+
+         </ResourceDictionary>
+    </Application.Resources>
+</Application>

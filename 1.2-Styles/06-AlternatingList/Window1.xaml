@@ -1,0 +1,43 @@
+﻿<Window x:Class="_06_AlternatingList.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="06-AlternatingList" Height="300" Width="300">
+    
+    <Window.Resources>
+        <Style x:Key="AlternatingItemStyle" TargetType="{x:Type ListBoxItem}">
+            <Style.Triggers>
+                <Trigger Property="ItemsControl.AlternationIndex" Value="0">
+                    <Setter Property="Background" Value="White"/>
+                </Trigger>
+                <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                    <Setter Property="Background" Value="Orange"/>
+                </Trigger>
+                <Trigger Property="ItemsControl.AlternationIndex" Value="2">
+                    <Setter Property="Background" Value="Red"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="AlternatingListStyle" TargetType="{x:Type ListBox}">
+            <Setter Property="AlternationCount" Value="3"/>
+            <Setter Property="ItemContainerStyle" Value="{StaticResource AlternatingItemStyle}"/>
+        </Style>
+
+    </Window.Resources>
+    
+    <DockPanel>
+        <Button MinWidth="80" Margin="5" DockPanel.Dock="Bottom" VerticalAlignment="Center" HorizontalAlignment="Right" Click="Button_Click">Add Item</Button>
+        <ListBox Name="listBoxEntries" Style="{StaticResource AlternatingListStyle}">
+            <ListBox.Items>
+                <ListBoxItem>Entry 1</ListBoxItem>
+                <ListBoxItem>Entry 2</ListBoxItem>
+                <ListBoxItem>Entry 3</ListBoxItem>
+                <ListBoxItem>Entry 4</ListBoxItem>
+                <ListBoxItem>Entry 5</ListBoxItem>
+                <ListBoxItem>Entry 6</ListBoxItem>
+                <ListBoxItem>Entry 7</ListBoxItem>
+                <ListBoxItem>Entry 8</ListBoxItem>
+                <ListBoxItem>Entry 9</ListBoxItem>
+            </ListBox.Items>
+        </ListBox>
+    </DockPanel>
+</Window>

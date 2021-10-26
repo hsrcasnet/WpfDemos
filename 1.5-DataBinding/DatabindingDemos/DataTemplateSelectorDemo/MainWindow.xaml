@@ -1,0 +1,67 @@
+﻿<Window
+    x:Class="DataTemplateSelectorDemo.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DataTemplateSelectorDemo"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="DataTemplateSelectorDemo"
+    Width="400"
+    Height="300"
+    mc:Ignorable="d">
+
+    <!--<d:DataContext>
+        <local:MainViewModel />
+    </d:DataContext>-->
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="FemaleDataTemplate">
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Rectangle
+                        Grid.Column="0"
+                        Width="40"
+                        Height="40"
+                        Fill="Violet" />
+                    <Label
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        Content="{Binding Name}"
+                        FontWeight="Bold" />
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="MaleDataTemplate">
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Rectangle
+                        Grid.Column="0"
+                        Width="40"
+                        Height="40"
+                        Fill="LightBlue" />
+                    <Label
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        Content="{Binding Name}"
+                        FontWeight="Bold" />
+                </Grid>
+            </DataTemplate>
+
+            <local:GenderDataTemplateSelector
+                x:Key="GenderDataTemplateSelector"
+                FemaleTemplate="{StaticResource FemaleDataTemplate}"
+                MaleTemplate="{StaticResource MaleDataTemplate}" />
+        </ResourceDictionary>
+
+    </Window.Resources>
+
+    <Grid>
+        <ItemsControl ItemTemplateSelector="{StaticResource GenderDataTemplateSelector}" ItemsSource="{Binding Persons}" />
+    </Grid>
+</Window>

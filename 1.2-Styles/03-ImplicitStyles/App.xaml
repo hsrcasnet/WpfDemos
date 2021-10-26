@@ -1,0 +1,17 @@
+﻿<Application x:Class="_03_ExplicitStyles.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    StartupUri="WindowSimple.xaml">
+    
+    <Application.Resources>
+        <FontFamily x:Key="FontFamilyKey">Arial</FontFamily>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource FontFamilyKey}" />
+        </Style>
+        <Style TargetType="{x:Type Control}">
+            <Setter Property="FontFamily" Value="{StaticResource FontFamilyKey}" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+    </Application.Resources>
+</Application>

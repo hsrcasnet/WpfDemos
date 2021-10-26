@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfTypeConverters", "WpfTypeConverters\WpfTypeConverters.csproj", "{BCB5A905-A2D0-4057-84F0-20ACB219D835}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCB5A905-A2D0-4057-84F0-20ACB219D835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCB5A905-A2D0-4057-84F0-20ACB219D835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCB5A905-A2D0-4057-84F0-20ACB219D835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCB5A905-A2D0-4057-84F0-20ACB219D835}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF8CB52B-07A3-4FCB-A632-A24E4ABDC62F}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,27 @@
+﻿<Window x:Class="_02_CustomControlDerivedFromFrameworkElement.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:_02_CustomControlDerivedFromFrameworkElement"
+    Title="02-Custom Control: Derived from FrameworkElement" Height="300" Width="404">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <my:RoundedRectangle x:Name="leftRoundedRectangle" Grid.Column="0" Fill="Silver" Margin="10">
+            <my:RoundedRectangle.Pen>
+                <Pen Brush="Black" Thickness="2"/>
+            </my:RoundedRectangle.Pen>
+        </my:RoundedRectangle>
+        
+        <StackPanel Grid.Column="1">
+            <Button Click="Button_Click">Above</Button>
+            <my:RoundedRectangle Grid.Column="0" Fill="Silver" Margin="10">
+                <my:RoundedRectangle.Pen>
+                    <Pen Brush="Black" Thickness="2"/>
+                </my:RoundedRectangle.Pen>
+            </my:RoundedRectangle>
+            <Button>Below</Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfScaleTransform.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="300" Width="300">
+
+    <StackPanel HorizontalAlignment="Center">
+        <Button Content="Button ScaleX=&quot;2&quot;">
+            <Button.LayoutTransform>
+                <ScaleTransform ScaleX="2"/>
+            </Button.LayoutTransform>
+        </Button>
+        <Button Content="Button ScaleY=&quot;2&quot;">
+            <Button.LayoutTransform>
+                <ScaleTransform ScaleY="2"/>
+            </Button.LayoutTransform>
+        </Button>
+        <Button Content="Button ScaleX=&quot;5&quot; ScaleY=&quot;0.8&quot;">
+            <Button.LayoutTransform>
+                <ScaleTransform ScaleX="5" ScaleY="0.8"/>
+            </Button.LayoutTransform>
+        </Button>
+    </StackPanel>
+</Window>

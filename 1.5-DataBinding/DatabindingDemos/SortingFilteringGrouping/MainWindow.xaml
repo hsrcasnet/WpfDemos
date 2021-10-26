@@ -1,0 +1,60 @@
+﻿<Window
+    x:Class="SortingFilteringGrouping.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:componentModel="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+    Title="MainWindow"
+    Width="525"
+    Height="350">
+    <Window.Resources>
+        <CollectionViewSource
+            x:Key="customerCollectionViewSource"
+            Filter="CustomerCollectionViewSource_OnFilter"
+            Source="{Binding Customers}">
+            <!--  Sorting  -->
+            <CollectionViewSource.SortDescriptions>
+                <componentModel:SortDescription Direction="Ascending" PropertyName="Age" />
+                <componentModel:SortDescription Direction="Ascending" PropertyName="FirstName" />
+                <componentModel:SortDescription Direction="Ascending" PropertyName="LastName" />
+            </CollectionViewSource.SortDescriptions>
+
+            <!--  Grouping  -->
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="Age" />
+            </CollectionViewSource.GroupDescriptions>
+        </CollectionViewSource>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!--  DEMO: Bind to DataContext.CustomerView  -->
+        <ListBox Grid.Column="0" ItemsSource="{Binding CustomerView}">
+
+            <ListBox.GroupStyle>
+                <x:Static Member="GroupStyle.Default" />
+            </ListBox.GroupStyle>
+        </ListBox>
+
+        <!--  Bind to CustomerView via CollectionViewSource  -->
+        <ListBox
+            Grid.Column="1"
+            IsSynchronizedWithCurrentItem="True"
+            ItemsSource="{Binding Source={StaticResource customerCollectionViewSource}}">
+            <ListBox.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <Label
+                                Height="25"
+                                Background="LightGray"
+                                Content="{Binding Path=Name}" />
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </ListBox.GroupStyle>
+        </ListBox>
+    </Grid>
+</Window>

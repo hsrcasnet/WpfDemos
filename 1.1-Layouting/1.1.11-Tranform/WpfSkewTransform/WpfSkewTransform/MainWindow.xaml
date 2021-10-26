@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfSkewTransform.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:WpfSkewTransform"
+        Title="MainWindow" Height="450" Width="450">
+
+    <StackPanel>
+        <StackPanel.Resources>
+            <ResourceDictionary>
+                <x:Array x:Key="Countries" Type="local:Country">
+                    <local:Country Name="Switzerland"/>
+                    <local:Country Name="Canada"/>
+                    <local:Country Name="USA"/>
+                    <local:Country Name="Mexico"/>
+                </x:Array>
+            </ResourceDictionary>
+        </StackPanel.Resources>
+
+        <!--Demo AngleY-->
+        <Label Content="Countries with SkewTransform AngleY=&quot;45&quot;" FontWeight="Bold" />
+        <ListBox ItemsSource="{StaticResource Countries}">
+            <ListBox.LayoutTransform>
+                <SkewTransform AngleY="10" />
+            </ListBox.LayoutTransform>
+        </ListBox>
+
+        <!--Demo AngleX-->
+        <Label Content="Countries with SkewTransform AngleX=&quot;45&quot;" FontWeight="Bold" />
+        <ListBox ItemsSource="{StaticResource Countries}">
+            <ListBox.LayoutTransform>
+                <SkewTransform AngleX="45"/>
+            </ListBox.LayoutTransform>
+        </ListBox>
+
+        <Label Content="Countries without skew" FontWeight="Bold" />
+        <ListBox ItemsSource="{StaticResource Countries}"/>
+    </StackPanel>
+
+</Window>

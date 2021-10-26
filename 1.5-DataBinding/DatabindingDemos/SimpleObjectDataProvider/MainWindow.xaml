@@ -1,0 +1,33 @@
+﻿<Window x:Class="SimpleObjectDataProvider.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:local="clr-namespace:SimpleObjectDataProvider" 
+        Title="Simple Object Provider" Height="150" Width="250">
+    <Window.Resources>
+        <local:Person x:Key="myPerson" FirstName="Hans" LastName="Meier" Age="22"/>
+    </Window.Resources>
+    <Grid Margin="4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Margin="4" Text="First Name" VerticalAlignment="Center"/>
+        <TextBox Margin="4" Text="{Binding Path=FirstName, Source={StaticResource myPerson}}"
+                 Grid.Column="1"/>
+
+        <TextBlock Margin="4" Text="Last Name" Grid.Row="1" VerticalAlignment="Center"/>
+        <TextBox Margin="4" Text="{Binding Path=LastName, Source={StaticResource myPerson}}"
+                 Grid.Column="1" Grid.Row="1"/>
+
+        <TextBlock Margin="4" Text="Age" Grid.Row="2" VerticalAlignment="Center"/>
+        <TextBox Margin="4" Text="{Binding Path=Age, Source={StaticResource myPerson}}"
+                 Grid.Column="1" Grid.Row="2"/>
+    </Grid>
+</Window>

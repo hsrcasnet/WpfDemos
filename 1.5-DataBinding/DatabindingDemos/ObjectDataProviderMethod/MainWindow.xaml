@@ -1,0 +1,35 @@
+﻿<Window x:Class="ObjectDataProviderMethod.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ObjectDataProviderMethod"
+        Title="Object Provider Method" Height="150" Width="250">
+    <Window.Resources>
+        <ObjectDataProvider x:Key="thePerson" ObjectType="local:PersonFactory" MethodName="GetThePerson"/>
+    </Window.Resources>
+    <Grid Margin="4" DataContext="{StaticResource thePerson}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Margin="4" Text="First Name" VerticalAlignment="Center"/>
+        <TextBox Margin="4" Text="{Binding Path=FirstName}"
+                 Grid.Column="1"/>
+
+        <TextBlock Margin="4" Text="Last Name" Grid.Row="1" VerticalAlignment="Center"/>
+        <TextBox Margin="4" Text="{Binding Path=LastName}"
+                 Grid.Column="1"
+                 Grid.Row="1"/>
+
+        <TextBlock Margin="4" Text="Age" Grid.Row="2" VerticalAlignment="Center"/>
+        <TextBox Margin="4" Text="{Binding Path=Age}"
+                 Grid.Column="1"
+                 Grid.Row="2"/>
+    </Grid>
+</Window>

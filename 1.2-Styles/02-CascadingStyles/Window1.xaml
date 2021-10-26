@@ -1,0 +1,27 @@
+﻿<Window x:Class="_02_CascadingStyles.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="02-CascadingStyles" Height="84" Width="300">
+    <Window.Resources>
+        <Style x:Key="MyButtonStyle">
+            <Setter Property="Button.BorderBrush" Value="Black" />
+            <Setter Property="Button.BorderThickness" Value="2" />
+            <Setter Property="Button.FontFamily" Value="Arial" />
+            <Setter Property="Button.FontSize" Value="10" />
+            <Setter Property="Button.Padding" Value="10 2 10 2" />
+            <Setter Property="Button.Margin" Value="2" />
+            <Setter Property="Button.Background" Value="White" />
+            <Setter Property="Button.Foreground" Value="Black" />
+        </Style>
+        
+        <Style x:Key="MyHelpButtonStyle" BasedOn="{StaticResource asdjfldsl}">
+            <Setter Property="Button.Background" Value="Blue"/>
+            <Setter Property="Button.Foreground" Value="White"/>
+        </Style>
+    </Window.Resources>
+    <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Orientation="Horizontal">
+        <Button Name="OKButton" Style="{StaticResource MyButtonStyle}">OK</Button>
+        <Button Name="CancelButton" Style="{StaticResource MyButtonStyle}">Cancel</Button>
+        <Button Name="HelpButton" Style="{StaticResource MyHelpButtonStyle}">Help</Button>
+    </StackPanel>
+</Window>

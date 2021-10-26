@@ -1,0 +1,21 @@
+﻿<Window x:Class="AutoBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Canvas>
+            <Image Source="penguins.jpg" 
+                   Canvas.Left="{Binding Path=Value,  ElementName=horzPos}" 
+                   Canvas.Top="{Binding Path=Value,  ElementName=vertPos}" 
+                   Stretch="UniformToFill"  Width="115" Height="115" />
+        </Canvas>
+        <StackPanel Grid.Column="1"> 
+          <Slider Orientation="Horizontal" Name="horzPos" Value="0" Maximum="100" />
+          <Slider Orientation="Horizontal" Name="vertPos" Value="0" Maximum="100"  />
+        </StackPanel>
+    </Grid>
+</Window>

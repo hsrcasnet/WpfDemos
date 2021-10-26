@@ -1,0 +1,10 @@
+﻿<Window x:Class="Canvas.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window1" Height="300" Width="400">
+    <Canvas>
+        <Ellipse Fill="Green" Width="60" Height="60" Canvas.Left="40" Canvas.Top="20" Canvas.ZIndex="2"/>
+        <Rectangle Fill="Aqua" Width="30" Height="70" Canvas.Left="50" Canvas.Bottom="40" Canvas.ZIndex="1"/>
+        <Polygon  Points="50, 100 200, 100 200, 200 300, 30" Fill="Blue" Stroke="Black" StrokeThickness="4" Canvas.Right="0" Canvas.Bottom="0"/>
+    </Canvas>
+</Window>

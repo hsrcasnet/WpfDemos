@@ -1,0 +1,30 @@
+﻿<Window
+    x:Class="AutoBinding2.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:AutoBinding2"
+    xmlns:model="clr-namespace:AutoBinding2.Model"
+    Title="MainWindow"
+    Width="525"
+    Height="350">
+
+    <Window.Resources>
+        <DataTemplate x:Key="carTemplate" DataType="{x:Type model:Car}">
+            <local:CarTemplate />
+        </DataTemplate>
+    </Window.Resources>
+
+    <ScrollViewer>
+        <StackPanel>
+            <!--  Demo 1: No ItemTemplate applied; Car.ToString is used  -->
+            <ListBox Margin="5" ItemsSource="{Binding}" />
+
+            <!--  Demo 2: ItemTemplate applied  -->
+            <ListBox
+                Margin="5"
+                ItemTemplate="{StaticResource carTemplate}"
+                ItemsSource="{Binding}" />
+
+        </StackPanel>
+    </ScrollViewer>
+</Window>

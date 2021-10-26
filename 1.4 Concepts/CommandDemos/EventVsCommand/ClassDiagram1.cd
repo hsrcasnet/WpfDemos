@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="System.Windows.Input.CommandBinding">
+    <Position X="8.25" Y="0.75" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Input.RoutedCommand">
+    <Position X="8.5" Y="4.5" Width="2.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Input.InputGestureCollection">
+    <Position X="13.25" Y="4" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Controls.MenuItem">
+    <Position X="1.25" Y="6" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Input.RoutedUICommand">
+    <Position X="8.5" Y="7.75" Width="2.75" />
+    <InheritanceLine Type="System.Windows.Input.RoutedCommand" FixedToPoint="true">
+      <Path>
+        <Point X="9.75" Y="7.276" />
+        <Point X="9.75" Y="7.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="System.Windows.Input.ICommand">
+    <Position X="4.5" Y="2.25" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="System.Windows.Input.ICommandSource">
+    <Position X="1.5" Y="2.25" Width="1.75" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="CommandTarget" />
+      <Property Name="Command" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="System.Windows.IInputElement" Collapsed="true">
+    <Position X="4.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="DependencyPropertySimple.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:DependencyPropertySimple"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    Title="FontSizeProperty" Width="400" Height="200">
+    <StackPanel>
+        <ComboBox x:Name="ComboBoxFontSizes">
+            <sys:Double>-2</sys:Double>
+            <sys:Double>14</sys:Double>
+            <sys:Double>16</sys:Double>
+            <sys:Double>32</sys:Double>
+        </ComboBox>
+        <local:TextLabel FontSize="{Binding ElementName=ComboBoxFontSizes, Path=SelectedItem}"
+                         Text="TextLabel with FontSize" />
+    </StackPanel>
+</Window>

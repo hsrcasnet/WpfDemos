@@ -1,0 +1,17 @@
+﻿<Window x:Class="_03_ExplicitStyles.WindowSimple"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WindowSimple" Height="100" Width="300">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Red"/>
+        </Style>
+    </Window.Resources>
+
+    <StackPanel>
+        <Button>OK</Button>
+        <Button>Cancel</Button>
+    </StackPanel>
+
+</Window>

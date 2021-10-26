@@ -1,0 +1,46 @@
+﻿<Window x:Class="CanvasDoesNotClipChildElements.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="400">
+
+    <TabControl>
+        <TabItem Header="Canvas in Grid">
+            <!--
+            A Grid will normally clip child elements within each grid cell so that the element will not extend beyond the bounds of the cell.
+            In the example below, the Label in the second column is clipped to the right side of the column.
+            -->
+            <Grid Background="AliceBlue" Margin="25" ShowGridLines="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="1"
+                       Content="Each man delights in the work that suits him best." Background="Olive"
+                       VerticalAlignment="Center"
+                       Margin="10"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Label in non-clipping Canvas" >
+
+            <!--
+            If we want to prevent the Grid from clipping the element, we can do this by placing the element in a Canvas, 
+            which we then put into the Grid.  Because a Canvas does not clip child elements,
+            this will allow the element to extend beyond the boundaries of the Grid.
+            -->
+            <Grid Background="AliceBlue" Margin="25" ShowGridLines="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Canvas Grid.Column="1">
+                    <Label Content="Each man delights in the work that suits him best." Background="Olive"
+                           VerticalAlignment="Center"
+                           Margin="10"/>
+                </Canvas>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>

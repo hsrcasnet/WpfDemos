@@ -1,0 +1,103 @@
+﻿<mah:MetroWindow
+    x:Class="_11_MahAppsDemo.MainWindow"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <x:Array x:Key="StringArray" Type="sys:String" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+            <sys:String>Horse</sys:String>
+            <sys:String>Sheep</sys:String>
+            <sys:String>Snake</sys:String>
+            <sys:String>Monkey</sys:String>
+        </x:Array>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <CheckBox x:Name="chkEnabled" IsChecked="True" Content="Show controls enabled"/>
+
+        <WrapPanel Grid.Row="1" IsEnabled="{Binding IsChecked, ElementName=chkEnabled}" >
+            <Grid>
+                <GroupBox Header="GroupBox" Width="100" Height="60"/>
+            </Grid>
+            <GroupBox Header="Button">
+                <Button Content="Button" HorizontalAlignment="Left" Width="77" Margin="10" ToolTip="Tooltip"/>
+            </GroupBox>
+            <GroupBox Header="CheckBox">
+                <CheckBox Content="CheckBox" Margin="10" ToolTip="Tooltip"/>
+            </GroupBox>
+            <GroupBox Header="RadioButton">
+                <RadioButton Content="RadioButton" Margin="10"/>
+            </GroupBox>
+            <GroupBox Header="TextBlock">
+                <TextBlock Width="100" HorizontalAlignment="Left" Text="TextBlock" Margin="10" ToolTip="Tooltip"/>
+            </GroupBox>
+            <GroupBox Header="TextBox">
+                <TextBox Width="100" HorizontalAlignment="Left" Text="TextBox" Margin="10" ToolTip="Tooltip" />
+            </GroupBox>
+            <GroupBox Header="RichTextBox">
+                <RichTextBox Width="100" HorizontalAlignment="Left" Margin="10" ToolTip="Tooltip"  >
+                    <FlowDocument>
+                        <Paragraph>RichTextBox</Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+            </GroupBox>
+            <GroupBox Header="Label">
+                <Label Content="Label" Margin="10" ToolTip="Tooltip"/>
+            </GroupBox>
+            <GroupBox Header="ScrollBar">
+                <ScrollBar Width="100" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10" ToolTip="Tooltip"/>
+            </GroupBox>
+            <GroupBox Header="Slider">
+                <Slider Width="100" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10" ToolTip="Tooltip" />
+            </GroupBox>
+            <GroupBox Header="Menu">
+                <Menu VerticalAlignment="Center">
+                    <MenuItem Header="MenuItem">
+                        <MenuItem Header="MenuItem"/>
+                    </MenuItem>
+                </Menu>
+            </GroupBox>
+            <GroupBox Header="ScrollViewer">
+                <ScrollViewer Width="100" HorizontalAlignment="Left" Margin="10" Height="50" ToolTip="Tooltip" >
+                    <TextBlock Text="ScrollViewer" Margin="0,30"/>
+                </ScrollViewer>
+            </GroupBox>
+            <GroupBox Header="TabControl">
+                <TabControl Height="80" Foreground="GreenYellow" Width="140" HorizontalAlignment="Left" Margin="10" ToolTip="Tooltip">
+                    <TabItem Header="TabHeader" >
+                        <!-- Affects child controls! -->
+                        <TextBlock Text="TextBlock" FontSize="26.667"/>
+                    </TabItem>
+                    <TabItem Header="Another"/>
+                </TabControl>
+            </GroupBox>
+            <GroupBox Header="ComboBox">
+                <ComboBox ItemsSource="{StaticResource StringArray}" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Center" ToolTip="Tooltip"/>
+            </GroupBox>
+            <GroupBox Header="ListBox">
+                <ListBox ItemsSource="{StaticResource StringArray}" HorizontalAlignment="Left" Margin="10" ToolTip="Tooltip" />
+            </GroupBox>
+            <GroupBox Header="DataGrid">
+                <DataGrid ItemsSource="{StaticResource StringArray}" HorizontalAlignment="Left" Margin="10" ToolTip="Tooltip" />
+            </GroupBox>
+            <GroupBox Header="ListView">
+                <ListView ItemsSource="{StaticResource StringArray}" HorizontalAlignment="Left" Margin="10" ToolTip="Tooltip" />
+            </GroupBox>
+            <GroupBox Header="ListView + View">
+                <ListView ItemsSource="{StaticResource StringArray}" HorizontalAlignment="Left" Margin="10" ToolTip="Tooltip" >
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Type"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </GroupBox>
+        </WrapPanel>
+    </Grid>
+</mah:MetroWindow>

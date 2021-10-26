@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPAddOwner", "DPAddOwner.csproj", "{1B82D323-79A0-4105-84A6-D15C30B01FDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontSizeProperty", "..\FontSizeProperty\FontSizeProperty.csproj", "{DA30B374-5D81-4547-B0E0-0B227761A796}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B82D323-79A0-4105-84A6-D15C30B01FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B82D323-79A0-4105-84A6-D15C30B01FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B82D323-79A0-4105-84A6-D15C30B01FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B82D323-79A0-4105-84A6-D15C30B01FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA30B374-5D81-4547-B0E0-0B227761A796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA30B374-5D81-4547-B0E0-0B227761A796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA30B374-5D81-4547-B0E0-0B227761A796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA30B374-5D81-4547-B0E0-0B227761A796}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

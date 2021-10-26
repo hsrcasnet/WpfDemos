@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfTypeConverters.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="450" Width="800"
+        Background="Red">
+
+    <!-- Demo: String-representations will be converted to complex types: Color, Thickness --> 
+    <Grid Background="Green" Margin="0, 10, 20, 40">
+
+        <!-- Demo: XML Element Syntax is much less readable than Attribute Syntax -->
+        <Grid>
+            <Grid.Background>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color A="255" R="0" G="0" B="255"></Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Grid.Background>
+            <Grid.Margin>
+                <Thickness>
+                    <Thickness.Left>0</Thickness.Left>
+                    <Thickness.Top>10</Thickness.Top>
+                    <Thickness.Right>20</Thickness.Right>
+                    <Thickness.Bottom>40</Thickness.Bottom>
+                </Thickness>
+            </Grid.Margin>
+
+        </Grid>
+    </Grid>
+</Window>

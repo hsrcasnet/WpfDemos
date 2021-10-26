@@ -1,0 +1,23 @@
+﻿<Window x:Class="MultiBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:MultiBinding="clr-namespace:MultiBinding" 
+        xmlns:system="clr-namespace:System;assembly=mscorlib" 
+        Title="MultiBinding" Height="280" Width="525">
+    <Window.Resources>
+        <MultiBinding:Person x:Key="myPerson" FirstName="Bob" LastName="Smith"/>
+        <MultiBinding:PersonNameConverter x:Key="personNameConverter"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource myPerson}">
+        <TextBox>
+            <MultiBinding Converter="{StaticResource personNameConverter}">
+                <MultiBinding.ConverterParameter>
+                    <system:String>LastFirst</system:String>
+                </MultiBinding.ConverterParameter>
+                <Binding Path="FirstName"/>
+                <Binding Path="LastName"/>
+            </MultiBinding>
+        </TextBox>
+    </Grid>
+</Window>
+
