@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandDemo2", "CommandDemo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandDemo3", "CommandDemo3\CommandDemo3.csproj", "{163BFBAD-BCB2-422D-929D-54D3175A7B69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComamndDemo0", "ComamndDemo0\ComamndDemo0.csproj", "{3070F632-1B12-46E1-AF2D-EA0791C2C6D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandDemo0", "CommandDemo0\CommandDemo0.csproj", "{3070F632-1B12-46E1-AF2D-EA0791C2C6D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCommandDemo", "CustomCommandDemo\CustomCommandDemo.csproj", "{23A7BF0C-00C9-446F-9156-A4E8C1A64CC3}"
 EndProject
