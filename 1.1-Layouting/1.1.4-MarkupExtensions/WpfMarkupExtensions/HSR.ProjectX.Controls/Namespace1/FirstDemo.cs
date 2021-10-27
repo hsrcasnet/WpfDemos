@@ -13,7 +13,7 @@ namespace HSR.ProjectX.Controls.Namespace1
 
         public override string ToString()
         {
-            return $"FirstDemo {instanceId:B}";
+            return $"FirstDemo {this.instanceId:B}";
         }
     }
 }
