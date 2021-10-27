@@ -14,7 +14,6 @@
         <StackPanel.Resources>
             <roche:FirstDemo x:Key="FirstDemoKey" />
             <roche:SecondDemo x:Key="SecondDemoKey" />
-            <roche:
         </StackPanel.Resources>
 
         <!--  Demo: Markup extension 'StaticResource' using attribute syntax  -->
