@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace EventToCommandDemo1
+namespace EventToCommandDemo1.ViewModels
 {
     public class KitchenViewModel : INotifyPropertyChanged
     {
@@ -21,11 +21,11 @@ namespace EventToCommandDemo1
 
         public bool IsCooking
         {
-            get => isCooking;
+            get => this.isCooking;
             private set
             {
-                isCooking = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsCooking)));
+                this.isCooking = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.IsCooking)));
             }
         }
 
@@ -40,7 +40,7 @@ namespace EventToCommandDemo1
 
                 MessageBox.Show($"Finished cooking: {message} is ready!");
             }
-            catch (Exception e)
+            catch (Exception)
             {
 
             }

@@ -1,10 +1,8 @@
 ﻿using System.Windows;
+using EventToCommandDemo1.ViewModels;
 
-namespace EventToCommandDemo1
+namespace EventToCommandDemo1.Views
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
