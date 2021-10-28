@@ -30,19 +30,19 @@ namespace CommandDemoApplicationCommands
 
         private void NewCommand(object sender, ExecutedRoutedEventArgs e)
         {
-            MessageBox.Show($"New command triggered from Source={e.Source}");
+            MessageBox.Show($"New command triggered from Source={e.Source.GetType().Name}");
             this.isDirty = false;
         }
 
         private void OpenCommand(object sender, ExecutedRoutedEventArgs e)
         {
-            MessageBox.Show($"Open command triggered from Source={e.Source}");
+            MessageBox.Show($"Open command triggered from Source={e.Source.GetType().Name}");
             this.isDirty = false;
         }
 
         private void SaveCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            MessageBox.Show($"Save command triggered from Source={e.Source}");
+            MessageBox.Show($"Save command triggered from Source={e.Source.GetType().Name}");
             this.isDirty = false;
         }
 
