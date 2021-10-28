@@ -11,7 +11,7 @@ namespace BindToList
 
         public override string ToString()
         {
-            return string.Format("{0} {1}", this.FirstName, this.LastName);
+            return $"{this.FirstName} {this.LastName}";
         }
     }
 
