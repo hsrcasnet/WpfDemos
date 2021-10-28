@@ -2,7 +2,6 @@
 
 namespace SimpleObject
 {
-    
     public partial class App : Application
     {
     }
