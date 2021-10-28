@@ -11,7 +11,7 @@
         
         <Menu Grid.Row="0">
             <MenuItem Header="File">
-                <MenuItem Command="ApplicationCommands.New"/>
+                <MenuItem Command="ApplicationCommands.New" Header="Speichern" InputGestureText="Strg+S"/>
                 <MenuItem Command="ApplicationCommands.Open"/>
                 <MenuItem Command="ApplicationCommands.Save"/>
                 <MenuItem Command="ApplicationCommands.SaveAs"/>
