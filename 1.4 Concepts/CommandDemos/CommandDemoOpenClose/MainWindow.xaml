@@ -1,0 +1,22 @@
+﻿<Window x:Class="CommandDemoOpenClose.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="CommandDemoOpenClose" Height="100" Width="300">
+
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Close"
+                    Executed="CloseCommandHandler"
+                    CanExecute="CanExecuteCloseCommandHandler"/>
+        <CommandBinding Command="ApplicationCommands.Open"
+                    Executed="OpenCommandHandler"
+                    CanExecute="CanExecuteOpenCommandHandler"/>
+    </Window.CommandBindings>
+
+    <StackPanel>
+        <Button Command="ApplicationCommands.Open" 
+                Content="Open File" />
+        <Button Command="ApplicationCommands.Close" 
+                Content="Close File"/>
+    </StackPanel>
+</Window>
+
