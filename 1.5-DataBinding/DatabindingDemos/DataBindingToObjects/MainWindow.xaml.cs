@@ -2,13 +2,6 @@
 
 namespace DataBindingToObjects
 {
-    public enum OccupationKind
-    {
-        Student,
-        Skilled,
-        Professional
-    }
-
     public partial class MainWindow : Window
     {
         public MainWindow()
