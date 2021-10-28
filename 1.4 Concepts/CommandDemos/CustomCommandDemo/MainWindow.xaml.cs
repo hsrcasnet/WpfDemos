@@ -12,7 +12,7 @@ namespace CustomCommandDemo
 
         private void RequeryCommand(object sender, ExecutedRoutedEventArgs e)
         {
-            MessageBox.Show("Requery");
+            MessageBox.Show($"RequeryCommand executed by Source={e.Source.GetType().Name}");
         }
     }
 }
