@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace RoutedCommandExample
+namespace DelegateCommandExample.ViewModels
 {
     public class KitchenViewModel
     {
@@ -12,7 +12,7 @@ namespace RoutedCommandExample
         public KitchenViewModel()
         {
             this.CookDinnerCommand = new DelegateCommand<string>(
-                execute: async p => await this.CookDinner(p),
+                executeAction: async p => await this.CookDinner(p),
                 canExecute: () => !this.IsCooking);
         }
 
@@ -29,7 +29,7 @@ namespace RoutedCommandExample
 
                 MessageBox.Show($"Finished cooking: {parameter} is ready!");
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 // Handle exception here
             }

@@ -1,45 +1,44 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace RoutedCommandExample
+namespace DelegateCommandExample
 {
-    /// <summary>
-    ///     Sample implementation of a delegate command.
-    /// </summary>
-    /// <typeparam name="T">Type of param.</typeparam>
     public class DelegateCommand<T> : ICommand
     {
-        private readonly Action<T> execute;
+        private readonly Action<T> executeAction;
         private readonly Func<bool> canExecute;
 
-        public DelegateCommand(Action<T> execute)
-            : this(execute, () => true)
+        public DelegateCommand(Action<T> executeAction)
+            : this(executeAction, () => true)
         {
-            this.execute = execute;
+            this.executeAction = executeAction;
         }
 
-        public DelegateCommand(Action<T> execute, Func<bool> canExecute)
+        public DelegateCommand(Action<T> executeAction, Func<bool> canExecute)
         {
-            this.execute = execute;
+            this.executeAction = executeAction;
             this.canExecute = canExecute;
         }
 
+        // ICommand
         public void Execute(object parameter)
         {
             var param = default(T);
-            if (parameter is T)
+            if (parameter is T variable)
             {
-                param = (T)parameter;
+                param = variable;
             }
 
-            this.execute(param);
+            this.executeAction(param);
         }
 
+        // ICommand
         public bool CanExecute(object parameter)
         {
             return this.canExecute();
         }
 
+        // Forward CanExecuteChanged to CommandManager.RequerySuggested event
         public event EventHandler CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value; }
