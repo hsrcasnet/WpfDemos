@@ -1,6 +1,7 @@
 ﻿using System.Windows;
+using DelegateCommandExample2.ViewModels;
 
-namespace DelegateCommandExample2
+namespace DelegateCommandExample2.Views
 {
     public partial class MainWindow : Window
     {

@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace DelegateCommandExample2
+namespace DelegateCommandExample2.ViewModels
 {
     public class KitchenViewModel : INotifyPropertyChanged
     {
@@ -58,9 +58,9 @@ namespace DelegateCommandExample2
 
                 this.Message += $"{DateTime.Now:G} -> Finished cooking: {message} is ready! {Environment.NewLine}";
             }
-            catch (Exception e)
+            catch (Exception)
             {
-
+                // TODO: Do some error handling here!
             }
             finally
             {

@@ -27,9 +27,9 @@ namespace DelegateCommandExample2
         public void Execute(object parameter)
         {
             var param = default(T);
-            if (parameter is T)
+            if (parameter is T t)
             {
-                param = (T)parameter;
+                param = t;
             }
 
             this.execute(param);
