@@ -1,6 +1,7 @@
 ﻿using System.Windows;
+using WpfMultilingual.ViewModels;
 
-namespace WpfMultilingual
+namespace WpfMultilingual.Views
 {
     public partial class MainWindow : Window
     {

@@ -27,5 +27,4 @@ namespace WpfMultilingual.Localization
             return binding.ProvideValue(serviceProvider);
         }
     }
-
 }

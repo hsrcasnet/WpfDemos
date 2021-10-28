@@ -14,7 +14,8 @@ namespace WpfMultilingual.Localization
 
         public string Translate(string key)
         {
-            var translatedValue = resourceManager.GetString(key, Thread.CurrentThread.CurrentUICulture);
+            // CurrentUICulture refers to the default user interface language
+            var translatedValue = this.resourceManager.GetString(key, Thread.CurrentThread.CurrentUICulture);
             return translatedValue;
         }
     }

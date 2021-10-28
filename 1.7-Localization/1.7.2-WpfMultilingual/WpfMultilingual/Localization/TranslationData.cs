@@ -24,7 +24,7 @@ namespace WpfMultilingual.Localization
             }
         }
 
-        public object Value => translationManager?.Translate(key);
+        public object Value => translationManager?.Translate(this.key);
 
         public bool ReceiveWeakEvent(Type managerType, object sender, EventArgs e)
         {
@@ -33,24 +33,25 @@ namespace WpfMultilingual.Localization
                 this.OnLanguageChanged();
                 return true;
             }
+
             return false;
         }
 
         private void OnLanguageChanged()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.Value)));
+            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.Value)));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         ~TranslationData()
         {
-            Dispose(false);
+            this.Dispose(false);
         }
 
         public void Dispose()
         {
-            Dispose(true);
+            this.Dispose(true);
             GC.SuppressFinalize(this);
         }
 

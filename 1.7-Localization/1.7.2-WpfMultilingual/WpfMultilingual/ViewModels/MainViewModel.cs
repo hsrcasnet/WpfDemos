@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
+using System.Threading;
 using WpfMultilingual.Localization;
 
-namespace WpfMultilingual
+namespace WpfMultilingual.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
@@ -20,8 +21,20 @@ namespace WpfMultilingual
             set
             {
                 this.translationManager.CurrentLanguage = value;
-                this.OnPropertyChanged(nameof(Language));
+                this.OnPropertyChanged(nameof(this.Language));
+                this.OnPropertyChanged(nameof(this.CurrentCulture));
+                this.OnPropertyChanged(nameof(this.CurrentUICulture));
             }
+        }
+
+        public CultureInfo CurrentCulture
+        {
+            get => Thread.CurrentThread.CurrentCulture;
+        }
+
+        public CultureInfo CurrentUICulture
+        {
+            get => Thread.CurrentThread.CurrentUICulture;
         }
 
         public IEnumerable<CultureInfo> Languages => this.translationManager.Languages;

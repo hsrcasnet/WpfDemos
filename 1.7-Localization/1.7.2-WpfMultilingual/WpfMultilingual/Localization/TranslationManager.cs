@@ -26,6 +26,7 @@ namespace WpfMultilingual.Localization
                     Thread.CurrentThread.CurrentCulture = value;
                     Thread.CurrentThread.CurrentUICulture = value;
 
+                    // Demo: What happens with task's cultures if DefaultThreadCurrentCulture is not set?
                     CultureInfo.DefaultThreadCurrentCulture = value;
                     CultureInfo.DefaultThreadCurrentUICulture = value;
 
@@ -40,7 +41,7 @@ namespace WpfMultilingual.Localization
 
         private void OnLanguageChanged()
         {
-            LanguageChanged?.Invoke(this, EventArgs.Empty);
+            this.LanguageChanged?.Invoke(this, EventArgs.Empty);
         }
 
         public string Translate(string key)
@@ -51,7 +52,11 @@ namespace WpfMultilingual.Localization
                 return translatedValue;
             }
 
-            throw new ArgumentException($"Key '{key}' was not found for culture '{this.CurrentLanguage.Name}'.");
+            // Demo: Either throw an exception or display #key# to indicate non-existent translation
+
+            return $"#{key}#";
+
+            //throw new ArgumentException($"Key '{key}' was not found for culture '{this.CurrentLanguage.Name}'.");
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace WpfMultilingual
+namespace WpfMultilingual.ViewModels
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
@@ -9,7 +9,7 @@ namespace WpfMultilingual
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

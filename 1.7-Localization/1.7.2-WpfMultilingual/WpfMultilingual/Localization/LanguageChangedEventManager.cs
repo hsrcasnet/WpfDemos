@@ -17,19 +17,19 @@ namespace WpfMultilingual.Localization
 
         private void OnLanguageChanged(object sender, EventArgs e)
         {
-            DeliverEvent(sender, e);
+            this.DeliverEvent(sender, e);
         }
 
         protected override void StartListening(object source)
         {
-            var manager = (ITranslationManager)source;
-            manager.LanguageChanged += OnLanguageChanged;
+            var translationManager = (ITranslationManager)source;
+            translationManager.LanguageChanged += this.OnLanguageChanged;
         }
 
-        protected override void StopListening(Object source)
+        protected override void StopListening(object source)
         {
-            var manager = (ITranslationManager)source;
-            manager.LanguageChanged -= OnLanguageChanged;
+            var translationManager = (ITranslationManager)source;
+            translationManager.LanguageChanged -= this.OnLanguageChanged;
         }
 
         private static LanguageChangedEventManager CurrentManager
@@ -37,13 +37,14 @@ namespace WpfMultilingual.Localization
             get
             {
                 var managerType = typeof(LanguageChangedEventManager);
-                var manager = (LanguageChangedEventManager)GetCurrentManager(managerType);
-                if (manager == null)
+                var languageChangedEventManager = (LanguageChangedEventManager)GetCurrentManager(managerType);
+                if (languageChangedEventManager == null)
                 {
-                    manager = new LanguageChangedEventManager();
-                    SetCurrentManager(managerType, manager);
+                    languageChangedEventManager = new LanguageChangedEventManager();
+                    SetCurrentManager(managerType, languageChangedEventManager);
                 }
-                return manager;
+
+                return languageChangedEventManager;
             }
         }
     }
