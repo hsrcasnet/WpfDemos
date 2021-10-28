@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
 
 namespace BindToList2
@@ -17,10 +16,10 @@ namespace BindToList2
 
         private void OnDeletePerson(object sender, RoutedEventArgs e)
         {
-            var selected = this.listBox.SelectedItem as Person;
-            if (this.persons.Contains(selected))
+            var selectedPerson = this.listBox.SelectedItem as Person;
+            if (this.persons.Contains(selectedPerson))
             {
-                this.persons.Remove(selected);
+                this.persons.Remove(selectedPerson);
             }
         }
 

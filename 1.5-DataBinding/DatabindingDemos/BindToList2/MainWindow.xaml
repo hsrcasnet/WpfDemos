@@ -5,7 +5,7 @@
 
     <DockPanel DataContext="{Binding}">
         <ListBox DockPanel.Dock="Left" ItemsSource="{Binding}" Margin="5" MinWidth="120"
-                x:Name="listBox" IsSynchronizedWithCurrentItem="True" >
+                x:Name="listBox" IsSynchronizedWithCurrentItem="True">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
