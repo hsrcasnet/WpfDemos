@@ -1,5 +1,4 @@
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
 
 namespace DataBindingToObjects
 {
@@ -9,23 +8,11 @@ namespace DataBindingToObjects
         private string lastName;
         private int age;
         private string occupation;
-        private int number;
-
-        //public PersonViewModel(IPersonService personService)
-        //{
-
-        //}
 
         // Each property calls the OnPropertyChanged method
         // when its value changed, and each property that 
         // affects the Person's Description, also calls the 
         // OnPropertyChanged method for the Description property.
-
-        //public int Number
-        //{
-        //    get => number;
-        //    set => SetProperty(ref number, value);
-        //}
 
         public string FirstName
         {
@@ -36,7 +23,7 @@ namespace DataBindingToObjects
                 {
                     this.firstName = value;
                     this.OnPropertyChanged("FirstName");
-                    this.OnPropertyChanged(nameof(this.Description));
+                    this.OnPropertyChanged("Description");
                 }
             }
         }
@@ -100,17 +87,15 @@ namespace DataBindingToObjects
         /// targets when the values of properties change.
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private void OnPropertyChanged([CallerMemberName]string propertyName = null)
+        private void OnPropertyChanged(string propertyName)
         {
-            // Raise the PropertyChanged event
-            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            if (this.PropertyChanged != null)
+            {
+                // Raise the PropertyChanged event
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
-        
 
         #endregion
-    }
-
-    public interface IPersonService
-    {
     }
 }
