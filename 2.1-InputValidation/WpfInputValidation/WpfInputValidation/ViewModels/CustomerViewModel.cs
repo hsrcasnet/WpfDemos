@@ -3,14 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 
 namespace WpfInputValidation.ViewModels
 {
     public class CustomerViewModel : INotifyDataErrorInfo
     {
         private readonly Dictionary<string, ICollection<string>> validationErrors = new Dictionary<string, ICollection<string>>();
-        
+
         private string firstName;
         private string lastName;
         private int age;
