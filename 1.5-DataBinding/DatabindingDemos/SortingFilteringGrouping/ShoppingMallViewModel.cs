@@ -4,14 +4,14 @@ using System.Windows.Data;
 
 namespace SortingFilteringGrouping
 {
-    public class ShoppingMall
+    public class ShoppingMallViewModel
     {
         public ObservableCollection<Customer> Customers { get; }
 
         // CustomerView is has basically the same purpose as customerCollectionViewSource (XAML)
         public ICollectionView CustomerView { get; }
 
-        public ShoppingMall()
+        public ShoppingMallViewModel()
         {
             this.Customers = new ObservableCollection<Customer>(CustomersFactory.GetCustomers());
             this.CustomerView = CollectionViewSource.GetDefaultView(this.Customers);

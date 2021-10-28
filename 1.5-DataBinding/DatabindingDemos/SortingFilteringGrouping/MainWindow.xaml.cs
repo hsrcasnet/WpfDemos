@@ -8,7 +8,7 @@ namespace SortingFilteringGrouping
         public MainWindow()
         {
             this.InitializeComponent();
-            this.DataContext = new ShoppingMall();
+            this.DataContext = new ShoppingMallViewModel();
         }
 
         private void CustomerCollectionViewSource_OnFilter(object sender, FilterEventArgs e)
