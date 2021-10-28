@@ -1,0 +1,41 @@
+﻿<Window x:Class="CommandDemoApplicationCommands.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="CommandDemoApplicationCommands" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Menu Grid.Row="0">
+            <MenuItem Header="File">
+                <MenuItem Command="ApplicationCommands.New"/>
+                <MenuItem Command="ApplicationCommands.Open"/>
+                <MenuItem Command="ApplicationCommands.Save"/>
+                <MenuItem Command="ApplicationCommands.SaveAs"/>
+                <Separator></Separator>
+                <MenuItem Command="ApplicationCommands.Close"/>
+            </MenuItem>
+        </Menu>
+
+        <ToolBarTray Grid.Row="1">
+            <ToolBar>
+                <Button Command="New">New</Button>
+                <Button Command="Open">Open</Button>
+                <Button Command="Save">Save</Button>
+            </ToolBar>
+            <ToolBar>
+                <Button Command="Cut">Cut</Button>
+                <Button Command="Copy">Copy</Button>
+                <Button Command="Paste">Paste</Button>
+            </ToolBar>
+        </ToolBarTray>
+        
+        <TextBox Name="txt" Margin="5" Grid.Row="2" TextChanged="OnTextBoxTextChanged"
+               TextWrapping="Wrap" AcceptsReturn="True"/>
+    </Grid>
+</Window>
+
+
