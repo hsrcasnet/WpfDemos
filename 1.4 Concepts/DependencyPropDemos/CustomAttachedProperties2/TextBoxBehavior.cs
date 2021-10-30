@@ -51,19 +51,15 @@ namespace CustomAttachedProperties2
 
         private static void OnTextBoxGotFocus(object sender, RoutedEventArgs e)
         {
-            var textBox = e.OriginalSource as TextBox;
-            if (textBox == null)
+            if (e.OriginalSource is TextBox textBox)
             {
-                return;
+                textBox.SelectAll();
             }
-
-            textBox.SelectAll();
         }
 
         private static void IgnoreMouseButton(object sender, MouseButtonEventArgs e)
         {
-            var textBox = sender as TextBox;
-            if (textBox == null || textBox.IsKeyboardFocusWithin)
+            if (!(sender is TextBox textBox) || textBox.IsKeyboardFocusWithin)
             {
                 return;
             }
