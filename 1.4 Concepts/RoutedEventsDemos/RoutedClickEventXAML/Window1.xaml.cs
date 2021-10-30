@@ -10,27 +10,27 @@ namespace RoutedClickEvent
     {
         public Window1()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void StackPanel_SimpleButton_Click(object sender, RoutedEventArgs e)
         {
-            AppendDebugOutput(this.FormatRoutedEvent(sender, e));
+            this.AppendDebugOutput(this.FormatRoutedEvent(sender, e));
         }
 
         private void SimpleButton_Click_Cancel(object sender, RoutedEventArgs e)
         {
-            AppendDebugOutput(this.FormatRoutedEvent(sender, e));
+            this.AppendDebugOutput(this.FormatRoutedEvent(sender, e));
         }
 
         private void SimpleButton_Click_Yes(object sender, RoutedEventArgs e)
         {
-            AppendDebugOutput(this.FormatRoutedEvent(sender, e));
+            this.AppendDebugOutput(this.FormatRoutedEvent(sender, e));
         }
 
         private void SimpleButton_Click_No(object sender, RoutedEventArgs e)
         {
-            AppendDebugOutput(this.FormatRoutedEvent(sender, e));
+            this.AppendDebugOutput(this.FormatRoutedEvent(sender, e));
         }
 
         private void AppendDebugOutput(string debugMessage)
