@@ -5,11 +5,11 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Menu>
+        <Menu Grid.Row="0">
             <MenuItem Grid.Row="0" 
                       Command="ApplicationCommands.Paste" 
                       Header="Paste (anywhere)"/>
