@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandDemoOpenClose", "Com
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandDemoApplicationCommands", "CommandDemoApplicationCommands\CommandDemoApplicationCommands.csproj", "{3070F632-1B12-46E1-AF2D-EA0791C2C6D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventToCommandDemo2", "EventToCommandDemo2\EventToCommandDemo2.csproj", "{5A77800D-7D8C-4E26-8BF4-D86FD6755C72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -145,6 +147,18 @@ Global
 		{3070F632-1B12-46E1-AF2D-EA0791C2C6D7}.Release|Mixed Platforms.Build.0 = Release|x86
 		{3070F632-1B12-46E1-AF2D-EA0791C2C6D7}.Release|x86.ActiveCfg = Release|x86
 		{3070F632-1B12-46E1-AF2D-EA0791C2C6D7}.Release|x86.Build.0 = Release|x86
+		{5A77800D-7D8C-4E26-8BF4-D86FD6755C72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A77800D-7D8C-4E26-8BF4-D86FD6755C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A77800D-7D8C-4E26-8BF4-D86FD6755C72}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5A77800D-7D8C-4E26-8BF4-D86FD6755C72}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5A77800D-7D8C-4E26-8BF4-D86FD6755C72}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5A77800D-7D8C-4E26-8BF4-D86FD6755C72}.Debug|x86.Build.0 = Debug|Any CPU
+		{5A77800D-7D8C-4E26-8BF4-D86FD6755C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A77800D-7D8C-4E26-8BF4-D86FD6755C72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A77800D-7D8C-4E26-8BF4-D86FD6755C72}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5A77800D-7D8C-4E26-8BF4-D86FD6755C72}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5A77800D-7D8C-4E26-8BF4-D86FD6755C72}.Release|x86.ActiveCfg = Release|Any CPU
+		{5A77800D-7D8C-4E26-8BF4-D86FD6755C72}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
