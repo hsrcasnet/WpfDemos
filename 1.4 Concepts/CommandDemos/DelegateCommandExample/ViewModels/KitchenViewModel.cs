@@ -7,14 +7,14 @@ namespace DelegateCommandExample.ViewModels
 {
     public class KitchenViewModel
     {
-        public ICommand CookDinnerCommand { get; private set; }
-
         public KitchenViewModel()
         {
             this.CookDinnerCommand = new DelegateCommand<string>(
                 executeAction: async p => await this.CookDinner(p),
                 canExecute: () => !this.IsCooking);
         }
+
+        public ICommand CookDinnerCommand { get; private set; }
 
         public bool IsCooking { get; private set; }
 
