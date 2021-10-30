@@ -1,0 +1,13 @@
+﻿<Window x:Class="EventToCommandDemo2.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="EventToCommandDemo2" Height="100" Width="300">
+
+    <StackPanel>
+        <Button Content="Cook Dinner" IsEnabled="{Binding IsCooking, Converter={StaticResource BoolInverter}}">
+            <Button.InputBindings>
+                <MouseBinding  Gesture="LeftClick" Command="{Binding CookDinnerCommand}" CommandParameter="Pizza"/>
+            </Button.InputBindings>
+        </Button>
+    </StackPanel>
+</Window>
