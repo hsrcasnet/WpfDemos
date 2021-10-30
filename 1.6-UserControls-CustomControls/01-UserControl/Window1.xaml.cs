@@ -9,13 +9,14 @@ namespace _01_UserControl
         {
             this.InitializeComponent();
 
-            var viewModel = new List<ViewModel>();
+            var propertyItemViewModels = new List<PropertyItemViewModel>
+            {
+                new PropertyItemViewModel { Title = "First name" },
+                new PropertyItemViewModel { Title = "Last name" },
+                new PropertyItemViewModel { Title = "Address" }
+            };
 
-            viewModel.Add(new ViewModel { Title = "First name" });
-            viewModel.Add(new ViewModel { Title = "Last name" });
-            viewModel.Add(new ViewModel { Title = "Address" });
-
-            this.DataContext = viewModel;
+            this.DataContext = propertyItemViewModels;
         }
     }
 }

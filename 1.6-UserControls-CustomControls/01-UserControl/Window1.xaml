@@ -4,10 +4,10 @@
     xmlns:my="clr-namespace:_01_UserControl"
     Title="01-UserControl" Height="300" Width="500">
     <StackPanel>
-        <ItemsControl DockPanel.Dock="Left" ItemsSource="{Binding}" DataContext="{Binding}">
+        <ItemsControl DockPanel.Dock="Left" ItemsSource="{Binding}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                   <my:MyOwnUserControl DataContext="{Binding}"/>
+                    <my:MyOwnUserControl/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>

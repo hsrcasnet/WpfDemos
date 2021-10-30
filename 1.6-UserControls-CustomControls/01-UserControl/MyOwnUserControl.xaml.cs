@@ -13,7 +13,7 @@ namespace _01_UserControl
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var vm = (ViewModel)((ButtonBase)sender).DataContext;
+            var vm = (PropertyItemViewModel)((ButtonBase)sender).DataContext;
             MessageBox.Show($"Title={vm.Title}, Value={vm.Value}");
         }
     }

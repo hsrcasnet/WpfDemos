@@ -1,6 +1,6 @@
 ﻿namespace _01_UserControl
 {
-    public class ViewModel
+    public class PropertyItemViewModel
     {
         public string Title { get; set; }
 
