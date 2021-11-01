@@ -6,7 +6,8 @@
         xmlns:res="clr-namespace:WpfMultilingual.Properties"
         xmlns:localization="clr-namespace:WpfMultilingual.Localization"
         mc:Ignorable="d"
-        Title="MainWindow" Width="400" SizeToContent="Height">
+        Title="{localization:Translate MainWindowPageTitle}" 
+        Width="400" SizeToContent="Height">
     
     <Grid Margin="5">
         <Grid.RowDefinitions>
@@ -46,13 +47,13 @@
         <Label Grid.Row="3" Grid.Column="0"
                Content="Translation (using static Resx)" />
         <Label Grid.Row="3" Grid.Column="1"
-               Content="{x:Static res:Resources.HelloWorld}" />
+               Content="{x:Static res:Resources.HelloWorldLabelText}" />
 
         <!--Label with translated string (MarkupExtension)-->
         <Label Grid.Row="4" Grid.Column="0"
                Content="Translation (using MarkupExtension)" />
         <Label Grid.Row="4" Grid.Column="1"
-               Content="{localization:Translate HelloWorld}" />
+               Content="{localization:Translate HelloWorldLabelText}" />
 
         <!--Label with translated string-->
         <Label Grid.Row="5" Grid.Column="0"
