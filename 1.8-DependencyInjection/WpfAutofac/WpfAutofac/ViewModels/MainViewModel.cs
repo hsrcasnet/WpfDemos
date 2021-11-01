@@ -63,7 +63,7 @@ namespace WpfAutofac.ViewModels
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                this.messageService.Show($"Something went wrong. Try again. [Error Code 1002]");
             }
             finally
             {
