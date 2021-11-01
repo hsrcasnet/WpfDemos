@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using System.Threading;
 
 namespace WpfCurrentCulture.ViewModels
@@ -8,43 +9,49 @@ namespace WpfCurrentCulture.ViewModels
         private readonly CultureInfo originalCurrentCulture;
         private readonly CultureInfo originalCurrentUICulture;
 
-        private CultureInfo currentCulture;
-        private CultureInfo currentUiCulture;
-
         public CultureViewModel()
         {
             this.originalCurrentCulture = Thread.CurrentThread.CurrentCulture;
             this.originalCurrentUICulture = Thread.CurrentThread.CurrentUICulture;
 
-            this.CurrentCulture = Thread.CurrentThread.CurrentCulture;
-            this.CurrentUICulture = Thread.CurrentThread.CurrentUICulture;
+            this.DateTime1 = new DateTime(2000, 1, 2, 9, 10, 0, DateTimeKind.Local);
+            this.DateTime2 = new DateTime(2000, 1, 2, 17, 0, 0, DateTimeKind.Local);
+            this.Decimal = 1222333444.555M;
         }
 
         public CultureInfo CurrentCulture
         {
-            get => this.currentCulture;
+            get => Thread.CurrentThread.CurrentCulture;
             set
             {
-                if (this.currentCulture != value)
+                if (Thread.CurrentThread.CurrentCulture != value)
                 {
-                    this.currentCulture = value;
-                    this.OnPropertyChanged(nameof(this.CurrentCulture));
+                    Thread.CurrentThread.CurrentCulture = value;
+
+                    this.OnPropertyChanged("");
                 }
             }
         }
 
         public CultureInfo CurrentUICulture
         {
-            get => this.currentUiCulture;
+            get => Thread.CurrentThread.CurrentUICulture;
             set
             {
-                if (this.currentUiCulture != value)
+                if (Thread.CurrentThread.CurrentUICulture != value)
                 {
-                    this.currentUiCulture = value;
-                    this.OnPropertyChanged(nameof(this.CurrentUICulture));
+                    Thread.CurrentThread.CurrentUICulture = value;
+
+                    this.OnPropertyChanged(""); // Update all properties
                 }
             }
         }
+
+        public DateTime DateTime1 { get; set; }
+
+        public DateTime DateTime2 { get; set; }
+
+        public decimal Decimal { get; set; }
 
         public void ResetCurrentCulture()
         {
