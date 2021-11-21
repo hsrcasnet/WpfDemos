@@ -1,0 +1,107 @@
+﻿<Window
+    x:Class="BankApp.Views.AddBankCustomersWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cmd="clr-namespace:BankApp.Commands"
+    xmlns:converter="clr-namespace:BankApp.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:BankApp.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:uc="clr-namespace:BankApp.UserControls"
+    Title="Add a bank customer"
+    Width="1085"
+    Height="530"
+    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+    ResizeMode="NoResize"
+    mc:Ignorable="d">
+
+    <StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Phone Number">
+                <TextBox Text="{Binding PhoneNumber, Mode=TwoWay}" />
+            </GroupBox>
+
+            <GroupBox Header="Mail">
+                <TextBox Text="{Binding Email, Mode=TwoWay}" />
+            </GroupBox>
+
+            <GroupBox Header="Reliability">
+                <ComboBox ItemsSource="{Binding ReliabilityList}" SelectedIndex="{Binding Reliability, Converter={converter:IntToReliabilityConverter}}" />
+            </GroupBox>
+
+            <GroupBox Header="Description">
+                <TextBox Text="{Binding Description, Mode=TwoWay}" />
+            </GroupBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+
+            <uc:PersonUserControl
+                DateOfBirthrUC="{Binding BirthdayBankCustomer, Mode=TwoWay}"
+                GenderUC="{Binding GenderBankCustomer, Mode=TwoWay}"
+                NameUC="{Binding NameBankCustomer, Mode=TwoWay}"
+                PatronymicUC="{Binding PatronymicBankCustomer, Mode=TwoWay}"
+                PlaceOfBirthUC="{Binding PlaceOfBirthBankCustomer, Mode=TwoWay}"
+                SurnameUC="{Binding SurnameBankCustomer, Mode=TwoWay}"
+                TitleUC="Customer" />
+
+            <uc:PassportUserControl
+                DateOfIssueUC="{Binding DateOfIssuePassport, Mode=TwoWay}"
+                DivisionCodeLeftUC="{Binding DivisionCodeLeftPassport, Mode=TwoWay}"
+                DivisionCodeRightUC="{Binding DivisionCodeRightPassport, Mode=TwoWay}"
+                NumberUC="{Binding NumberPassport, Mode=TwoWay}"
+                PlaceOfIssueUC="{Binding PlaceOfIssuePassport, Mode=TwoWay}"
+                SeriesUC="{Binding SeriesPassport, Mode=TwoWay}"
+                TitleUC="Passport" />
+
+            <uc:AddressUserControl
+                ApartmentNumberUC="{Binding ApartmentNumberPlaceOfResidence, Mode=TwoWay}"
+                CityUC="{Binding CityPlaceOfResidence, Mode=TwoWay}"
+                DistrictUC="{Binding DistrictPlaceOfResidence, Mode=TwoWay}"
+                HouseNumberUC="{Binding HouseNumberPlaceOfResidence, Mode=TwoWay}"
+                HousingUC="{Binding HousingPlaceOfResidence, Mode=TwoWay}"
+                RegionUC="{Binding RegionPlaceOfResidence, Mode=TwoWay}"
+                RegistrationDateUC="{Binding RegistrationDatePlaceOfResidence, Mode=TwoWay}"
+                StreetUC="{Binding StreetPlaceOfResidence, Mode=TwoWay}"
+                TitleUC="Residence" />
+
+            <uc:AddressUserControl
+                ApartmentNumberUC="{Binding ApartmentNumberRegistration, Mode=TwoWay}"
+                CityUC="{Binding CityRegistration, Mode=TwoWay}"
+                DistrictUC="{Binding DistrictRegistration, Mode=TwoWay}"
+                HouseNumberUC="{Binding HouseNumberRegistration, Mode=TwoWay}"
+                HousingUC="{Binding HousingRegistration, Mode=TwoWay}"
+                RegionUC="{Binding RegionRegistration, Mode=TwoWay}"
+                RegistrationDateUC="{Binding RegistrationDateRegistration, Mode=TwoWay}"
+                StreetUC="{Binding StreetRegistration, Mode=TwoWay}"
+                TitleUC="Adress of Registration" />
+        </StackPanel>
+
+        <StackPanel
+            Height="50"
+            HorizontalAlignment="Right"
+            Orientation="Horizontal">
+
+            <Button
+                Width="80"
+                Margin="5,0,5,0"
+                CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=local:AddBankCustomersWindow}}"
+                Content="Apply">
+                <Button.Command>
+                    <cmd:CloseDialogCommand DialogResult="True" />
+                </Button.Command>
+            </Button>
+
+            <Button
+                Width="80"
+                Margin="5,0,5,0"
+                CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=local:AddBankCustomersWindow}}"
+                Content="Cancel">
+                <Button.Command>
+                    <cmd:CloseDialogCommand DialogResult="False" />
+                </Button.Command>
+            </Button>
+        </StackPanel>
+    </StackPanel>
+</Window>

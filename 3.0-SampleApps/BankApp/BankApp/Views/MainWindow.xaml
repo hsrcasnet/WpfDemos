@@ -1,0 +1,17 @@
+﻿<Window
+    x:Class="BankApp.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:uc="clr-namespace:BankApp.UserControls"
+    Title="{Binding Title}"
+    Width="800"
+    Height="450"
+    DataContext="{Binding MainWindowVM, Source={StaticResource Locator}}"
+    mc:Ignorable="d">
+    <StackPanel>
+        <uc:MainMenuUserControl />
+        <uc:MainUserControl />
+    </StackPanel>
+</Window>
