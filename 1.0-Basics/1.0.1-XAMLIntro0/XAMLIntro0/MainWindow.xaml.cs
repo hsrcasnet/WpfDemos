@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.Design;
-using System.Windows;
+﻿using System.Windows;
 
 namespace XAMLIntro0
 {
