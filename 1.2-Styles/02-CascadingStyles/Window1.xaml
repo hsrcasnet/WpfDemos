@@ -13,8 +13,8 @@
             <Setter Property="Button.Background" Value="White" />
             <Setter Property="Button.Foreground" Value="Black" />
         </Style>
-        
-        <Style x:Key="MyHelpButtonStyle" BasedOn="{StaticResource asdjfldsl}">
+
+        <Style x:Key="MyHelpButtonStyle" BasedOn="{StaticResource MyButtonStyle}">
             <Setter Property="Button.Background" Value="Blue"/>
             <Setter Property="Button.Foreground" Value="White"/>
         </Style>
