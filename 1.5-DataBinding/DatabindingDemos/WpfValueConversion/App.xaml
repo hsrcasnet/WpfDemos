@@ -1,17 +1,21 @@
-﻿<Application x:Class="WpfValueConversion.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:converters="clr-namespace:WpfValueConversion.Converters"
-             StartupUri="MainWindow.xaml">
+﻿<Application
+    x:Class="WpfValueConversion.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="clr-namespace:WpfValueConversion.Converters"
+    StartupUri="MainWindow.xaml">
     <Application.Resources>
-         <ResourceDictionary>
+        <ResourceDictionary>
 
-             <converters:DateTimeToBoolConverter x:Key="DateTimeToBoolConverter" />
+            <converters:BoolToColorBrushConverter
+                x:Key="BoolToRedGreenColorBrushConverter"
+                FalseColor="Red"
+                TrueColor="Green" />
 
-             <converters:DatetimeToStringConverter x:Key="DatetimeToStringConverter" />
+            <converters:DatetimeToStringConverter x:Key="DatetimeToStringConverter" Format="D" />
 
-             <converters:DebugConverter x:Key="DebugConverter" />
+            <converters:DebugConverter x:Key="DebugConverter" />
 
-         </ResourceDictionary>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

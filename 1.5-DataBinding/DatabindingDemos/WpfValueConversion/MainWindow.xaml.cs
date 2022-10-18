@@ -8,7 +8,11 @@ namespace WpfValueConversion
         public MainWindow()
         {
             this.InitializeComponent();
-            this.DataContext = new PersonViewModel();
+            this.DataContext = new PersonViewModel
+            {
+                IsLoggedIn = true,
+                RetirementDate = DateTime.Now,
+            };
         }
     }
 }

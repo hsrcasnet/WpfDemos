@@ -6,6 +6,17 @@ namespace WpfValueConversion
     public class PersonViewModel : INotifyPropertyChanged
     {
         private DateTime? retirementDate;
+        private bool isLoggedIn;
+
+        public bool IsLoggedIn
+        {
+            get => this.isLoggedIn;
+            set
+            {
+                this.isLoggedIn = value;
+                this.OnPropertyChanged(nameof(this.IsLoggedIn));
+            }
+        }
 
         public DateTime? RetirementDate
         {

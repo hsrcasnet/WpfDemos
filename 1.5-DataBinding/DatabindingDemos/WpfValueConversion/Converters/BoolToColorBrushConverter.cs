@@ -17,14 +17,7 @@ namespace WpfValueConversion.Converters
 
             if (value is bool boolValue)
             {
-                if (boolValue == true)
-                {
-                    color = TrueColor;
-                }
-                else
-                {
-                    color = FalseColor;
-                }
+                color = boolValue ? this.TrueColor : this.FalseColor;
             }
 
             return new SolidColorBrush(color);
