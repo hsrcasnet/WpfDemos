@@ -14,6 +14,7 @@
         <StackPanel.Resources>
             <roche:FirstDemo x:Key="FirstDemoKey" />
             <roche:SecondDemo x:Key="SecondDemoKey" />
+            <SolidColorBrush x:Key="ButtonBackgroundColor">Green</SolidColorBrush>
         </StackPanel.Resources>
 
         <!--  Demo: Markup extension 'StaticResource' using attribute syntax  -->
@@ -23,15 +24,8 @@
         <Label>
             <StaticResource ResourceKey="FirstDemoKey" />
         </Label>
+
+        <!--  Demo: Markup extension 'StaticResource' can be used many different scenarios...  -->
+        <!--<Button Background="{StaticResource ButtonBackgroundColor}">Button with Background</Button>-->
     </StackPanel>
-
-    <!--<StackPanel>
-        <StackPanel.Resources>
-            <SolidColorBrush x:Key="myColor">Green</SolidColorBrush>
-        </StackPanel.Resources>
-
-        <Button Background="{StaticResource myColor}">Hallo1</Button>
-        <Button>Hallo2</Button>
-    </StackPanel>-->
-
 </Window>
