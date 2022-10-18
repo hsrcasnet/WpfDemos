@@ -6,6 +6,7 @@
     Width="525"
     Height="350">
 
-    <Button Content="Click Me!" />
-
+    <StackPanel>
+        <Button Content="Click Me!" />
+    </StackPanel>
 </Window>
