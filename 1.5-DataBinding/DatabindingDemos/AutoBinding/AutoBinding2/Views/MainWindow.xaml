@@ -26,7 +26,7 @@
     <ScrollViewer>
         <StackPanel>
             <!--Demo 1: No ItemTemplate applied; Car.ToString is used-->
-            <ListBox ItemsSource="{Binding .}"  Margin="5" />
+            <ListBox ItemsSource="{Binding}"  Margin="5" />
 
             <!--Demo 2: ItemTemplate applied-->
             <!--<ListBox ItemsSource="{Binding}"  Margin="5" ItemTemplate="{StaticResource carTemplate}"  />-->
