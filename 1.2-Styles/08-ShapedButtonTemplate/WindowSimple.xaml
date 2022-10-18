@@ -13,7 +13,6 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
-                            <Rectangle Fill="{TemplateBinding Background}" Margin="5"></Rectangle>
                             <Ellipse Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}"/>
                             <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20"/>
                         </Grid>
@@ -30,6 +29,7 @@
             <StackPanel>
                 <Label>line 1</Label>
                 <Label>line 2</Label>
-            </StackPanel></Button>
+            </StackPanel>
+        </Button>
     </StackPanel>
 </Window>
