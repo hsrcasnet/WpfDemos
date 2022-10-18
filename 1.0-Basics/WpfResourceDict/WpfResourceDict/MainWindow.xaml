@@ -11,6 +11,6 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid >
-        <Button Background="{StaticResource SolidColorBrushBlue}">Red Button</Button>
+        <Button Background="{StaticResource SolidColorBrushRed}">Red Button</Button>
     </Grid>
 </Window>
