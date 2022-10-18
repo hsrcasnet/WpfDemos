@@ -15,7 +15,7 @@
 				 Stroke="Black" Fill="LightBlue"
 				 Points="50,0 100,50 50,100 0,50">
                     <Polygon.Effect>
-                        <DropShadowEffect  ShadowDepth ="5"/>
+                        <DropShadowEffect ShadowDepth ="5"/>
                     </Polygon.Effect>
                 </Polygon>
 
