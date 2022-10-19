@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Data;
 
 namespace SortingFilteringGrouping
@@ -8,12 +9,14 @@ namespace SortingFilteringGrouping
     {
         public ObservableCollection<Customer> Customers { get; }
 
-        // CustomerView is has basically the same purpose as customerCollectionViewSource (XAML)
+        // CustomerView is the C# code representation of an ICollectionView
+        // just as customerCollectionViewSource is in XAML.
         public ICollectionView CustomerView { get; }
 
         public ShoppingMallViewModel()
         {
-            this.Customers = new ObservableCollection<Customer>(CustomersFactory.GetCustomers());
+            var customers = CustomersFactory.GetCustomers().ToList();
+            this.Customers = new ObservableCollection<Customer>(customers);
             this.CustomerView = CollectionViewSource.GetDefaultView(this.Customers);
 
             // Sorting
