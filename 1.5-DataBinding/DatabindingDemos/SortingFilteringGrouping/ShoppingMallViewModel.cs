@@ -15,8 +15,10 @@ namespace SortingFilteringGrouping
 
         public ShoppingMallViewModel()
         {
+            // Initialize ObservableCollection with customers 
             var customers = CustomersFactory.GetCustomers().ToList();
             this.Customers = new ObservableCollection<Customer>(customers);
+
             this.CustomerView = CollectionViewSource.GetDefaultView(this.Customers);
 
             // Sorting
