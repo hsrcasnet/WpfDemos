@@ -4,7 +4,9 @@
         xmlns:local="clr-namespace:CustomAttachedProperties2"
         Title="MainWindow" Height="100" Width="300">
     <StackPanel>
-        <TextBox Text="TextBox with SelectAllTextOnFocus"
+        <TextBox Text="TextBox with SelectAllTextOnFocus=&quot;True&quot;"
                  local:TextBoxBehavior.SelectAllTextOnFocus="True"/>
+        <TextBox Text="TextBox with SelectAllTextOnFocus=&quot;False&quot;"
+                 local:TextBoxBehavior.SelectAllTextOnFocus="False"/>
     </StackPanel>
 </Window>
