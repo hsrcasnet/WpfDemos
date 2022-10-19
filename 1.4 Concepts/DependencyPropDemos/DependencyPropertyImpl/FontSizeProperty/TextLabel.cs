@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using System.Globalization;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace DependencyPropertySimple
@@ -10,9 +9,9 @@ namespace DependencyPropertySimple
     public class TextLabel : FrameworkElement
     {
         public static readonly DependencyProperty FontSizeProperty = DependencyProperty.Register(
-            name: nameof(FontSize), 
+            name: nameof(FontSize),
             propertyType: typeof(double),
-            ownerType: typeof(TextLabel), 
+            ownerType: typeof(TextLabel),
             typeMetadata: new FrameworkPropertyMetadata(
                 defaultValue: 11.0,
                 flags: FrameworkPropertyMetadataOptions.AffectsMeasure,
@@ -43,7 +42,7 @@ namespace DependencyPropertySimple
         }
 
         /// <summary>
-        /// Alternative way to subscribe to value changes of a property at runtime.
+        /// Demo: Alternative way to subscribe to value changes of a property at runtime.
         /// </summary>
         public void SubscibeToFontSizePropertyChange()
         {
