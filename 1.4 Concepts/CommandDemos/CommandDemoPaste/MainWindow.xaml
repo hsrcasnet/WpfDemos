@@ -15,7 +15,7 @@
                       Header="Paste (anywhere)"/>
             <MenuItem Grid.Row="0" 
                       Command="ApplicationCommands.Paste"
-                      Header="Paste (specific)"
+                      Header="Paste (to TextBoxEditor2)"
                       CommandTarget="{Binding ElementName=TextBoxEditor2}" />
         </Menu>
 
