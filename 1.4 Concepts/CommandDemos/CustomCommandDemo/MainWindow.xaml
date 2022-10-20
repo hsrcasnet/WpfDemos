@@ -6,7 +6,7 @@
 
     <Window.Resources>
         <Style TargetType="Button">
-            <!--Default Button content to be the Text provided from the Command.-->
+            <!--Demo/Hack: Use Command.Text as Content of the Button. Uncomment the local value of the Button below and see what happens.-->
             <Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"/>
         </Style>
     </Window.Resources>
@@ -17,16 +17,18 @@
     </Window.CommandBindings>
 
     <StackPanel>
+        <!--Demo: Bind Requery-Command to a MenuItems-->
         <Menu>
             <MenuItem Header="File">
                 <!--MenuItem adopts RoutedUICommand.Text as Header description-->
                 <MenuItem Command="local:DataCommands.Requery" />
 
                 <!--MenuItem uses custom Header description and input gesture text-->
-                <MenuItem Command="local:DataCommands.Requery" Header="Custom Requery Text" InputGestureText="¢¢#°§¢"/>
+                <MenuItem Command="local:DataCommands.Requery" Header="Custom Requery Text" InputGestureText="Strg+R"/>
             </MenuItem>
         </Menu>
 
+        <!--Demo: Bind Requery-Command to a Button-->
         <Button
             Content="Requery"
             Command="{x:Static local:DataCommands.Requery}" />
