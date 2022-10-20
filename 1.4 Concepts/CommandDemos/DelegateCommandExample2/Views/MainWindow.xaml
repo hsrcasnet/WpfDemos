@@ -4,6 +4,7 @@
         Title="DelegateCommandExample2" Height="300" Width="400">
 
     <Window.InputBindings>
+        <!-- Demo: Bind Ctrl+C to the CookDinnerCommand -->
         <KeyBinding Command="{Binding CookDinnerCommand}" Modifiers="Ctrl" Key="C" />
     </Window.InputBindings>
 

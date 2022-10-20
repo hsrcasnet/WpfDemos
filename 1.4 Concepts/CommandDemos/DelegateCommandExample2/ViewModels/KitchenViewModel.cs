@@ -15,6 +15,7 @@ namespace DelegateCommandExample2.ViewModels
         {
         }
 
+        // Demo: Use compound assignment to initialize the CookDinnerCommand
         public ICommand CookDinnerCommand
         {
             get
