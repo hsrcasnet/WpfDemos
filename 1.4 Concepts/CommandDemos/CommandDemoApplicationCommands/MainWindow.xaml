@@ -12,12 +12,12 @@
         
         <Menu Grid.Row="0">
             <MenuItem Header="_File">
-                <MenuItem Command="ApplicationCommands.Save" Header="Speichern" InputGestureText="Strg+S"/>
+                <MenuItem Command="ApplicationCommands.Save" Header="Speichern" InputGestureText="Strg+S" />
                 <MenuItem Command="ApplicationCommands.New"/>
                 <MenuItem Command="ApplicationCommands.Open"/>
                 <MenuItem Command="ApplicationCommands.Save"/>
                 <MenuItem Command="ApplicationCommands.SaveAs"/>
-                <Separator></Separator>
+                <Separator />
                 <MenuItem Command="ApplicationCommands.Close"/>
             </MenuItem>
         </Menu>
@@ -35,8 +35,9 @@
             </ToolBar>
         </ToolBarTray>
         
-        <TextBox Name="txt" Margin="5" Grid.Row="2" TextChanged="OnTextBoxTextChanged"
-               TextWrapping="Wrap" AcceptsReturn="True"/>
+        <TextBox Name="Notepad" Margin="5" Grid.Row="2" 
+                 TextChanged="OnTextBoxTextChanged"
+                 TextWrapping="Wrap" AcceptsReturn="True"/>
     </Grid>
 </Window>
 
