@@ -6,7 +6,10 @@
     <StackPanel>
         <Button Content="Cook Dinner" IsEnabled="{Binding IsCooking, Converter={StaticResource BoolInverter}}">
             <Button.InputBindings>
-                <MouseBinding  Gesture="LeftClick" Command="{Binding CookDinnerCommand}" CommandParameter="Pizza"/>
+                <MouseBinding
+                    Gesture="LeftClick" 
+                    Command="{Binding CookDinnerCommand}" 
+                    CommandParameter="Pizza"/>
             </Button.InputBindings>
         </Button>
     </StackPanel>
