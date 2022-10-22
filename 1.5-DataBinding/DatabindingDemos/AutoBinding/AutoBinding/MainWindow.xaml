@@ -3,19 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Canvas>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Slider Orientation="Horizontal" Name="horzPos" Value="0" Maximum="1000" />
+            <Slider Orientation="Horizontal" Name="vertPos" Value="0" Maximum="1000"  />
+        </StackPanel>
+        <Canvas Grid.Row="1">
             <Image Source="penguins.jpg" 
-                   Canvas.Left="{Binding Path=Value,  ElementName=horzPos}" 
-                   Canvas.Top="{Binding Path=Value,  ElementName=vertPos}" 
+                   Canvas.Left="{Binding Path=Value, ElementName=horzPos}" 
+                   Canvas.Top="{Binding Path=Value, ElementName=vertPos}" 
                    Stretch="UniformToFill"  Width="115" Height="115" />
         </Canvas>
-        <StackPanel Grid.Column="1"> 
-          <Slider Orientation="Horizontal" Name="horzPos" Value="0" Maximum="100" />
-          <Slider Orientation="Horizontal" Name="vertPos" Value="0" Maximum="100"  />
-        </StackPanel>
     </Grid>
 </Window>
