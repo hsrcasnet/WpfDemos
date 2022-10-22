@@ -13,7 +13,7 @@ namespace SortingFilteringGrouping
 
         private void CustomerCollectionViewSource_OnFilter(object sender, FilterEventArgs e)
         {
-            e.Accepted = e.Item is Customer person && person.Age > 18;
+            e.Accepted = e.Item is Customer person && person.Age >= 18;
         }
     }
 }
