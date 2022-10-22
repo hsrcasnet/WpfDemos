@@ -9,7 +9,7 @@
 
         <!-- Demo: XML Element Syntax is much less readable than Attribute Syntax -->
         <Grid>
-            <Grid.Background>
+            <!--<Grid.Background>
                 <SolidColorBrush>
                     <SolidColorBrush.Color>
                         <Color A="255" R="0" G="0" B="255"></Color>
@@ -23,8 +23,19 @@
                     <Thickness.Right>20</Thickness.Right>
                     <Thickness.Bottom>40</Thickness.Bottom>
                 </Thickness>
-            </Grid.Margin>
+            </Grid.Margin>-->
 
+            <!--Demo: Using linear gradient brush as Grid.Background-->
+            <!--<Grid Margin="0, 10, 20, 40">
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Yellow" Offset="0.0" />
+                        <GradientStop Color="Red" Offset="0.25" />
+                        <GradientStop Color="Blue" Offset="0.75" />
+                        <GradientStop Color="LimeGreen" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Grid.Background>
+            </Grid>-->
         </Grid>
     </Grid>
 </Window>
