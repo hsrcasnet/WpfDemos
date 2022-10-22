@@ -97,7 +97,7 @@
                     Margin="4"
                     VerticalAlignment="Center"
                     FontStyle="Italic"
-                    Text="{Binding Path=Description, UpdateSourceTrigger=PropertyChanged}" />
+                    Text="{Binding Path=Description, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
             </Grid>
         </DataTemplate>
     </Window.Resources>
