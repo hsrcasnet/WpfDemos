@@ -7,10 +7,9 @@
         public string Image { get; set; }
 
         // Demo: Uncomment this code to show the effect of ToString() if no DataTemplate is applied
-        ////public override string ToString()
-        ////{
-        ////    return $"{this.Model} {this.Image}";
-        ////}
-        ///
+        //public override string ToString()
+        //{
+        //    return $"{this.Model} {this.Image}";
+        //}
     }
 }
