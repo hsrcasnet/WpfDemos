@@ -9,7 +9,7 @@ namespace WpfInputValidation.Converters
         {
             foreach (var value in values)
             {
-                if ((bool)value == true)
+                if (value is bool b && b == true)
                 {
                     return true;
                 }
