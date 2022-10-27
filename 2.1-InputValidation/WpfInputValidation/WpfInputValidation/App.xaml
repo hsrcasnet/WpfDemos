@@ -149,9 +149,19 @@
             </ControlTemplate.Triggers>
         </ControlTemplate>
 
-        <!--  Demo: Implicit style for TextBox  -->
+        <!--  Demo: Implicit style for TextBox (with border and exclamation mark)  -->
         <!--<Style TargetType="TextBox">
             <Setter Property="Validation.ErrorTemplate" Value="{StaticResource ValidationErrorTemplateWithBorder}" />
+        </Style>-->
+
+        <!--  Demo: Implicit style for TextBox (with validation errors)  -->
+        <!--<Style TargetType="TextBox">
+            <Setter Property="Validation.ErrorTemplate" Value="{StaticResource ValidationErrorTemplateWithMultipleErrors}" />
+        </Style>-->
+
+        <!--  Demo: Implicit style for TextBox (with validation errors and animation)  -->
+        <!--<Style TargetType="TextBox">
+            <Setter Property="Validation.ErrorTemplate" Value="{StaticResource ValidationErrorTemplateWithAnimation}" />
         </Style>-->
     </Application.Resources>
 </Application>
