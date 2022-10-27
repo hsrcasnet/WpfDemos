@@ -149,9 +149,9 @@
             </ControlTemplate.Triggers>
         </ControlTemplate>
 
-        <!--  Implicit style for TextBox  -->
-        <Style TargetType="TextBox">
+        <!--  Demo: Implicit style for TextBox  -->
+        <!--<Style TargetType="TextBox">
             <Setter Property="Validation.ErrorTemplate" Value="{StaticResource ValidationErrorTemplateWithBorder}" />
-        </Style>
+        </Style>-->
     </Application.Resources>
 </Application>
