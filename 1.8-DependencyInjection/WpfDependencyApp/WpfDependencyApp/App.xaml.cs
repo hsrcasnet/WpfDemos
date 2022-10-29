@@ -37,7 +37,7 @@ namespace WpfDependencyApp
 
         private void OnStartup(object sender, StartupEventArgs e)
         {
-            var mainWindow = this.serviceProvider.GetService<MainWindow>();
+            var mainWindow = this.serviceProvider.GetRequiredService<MainWindow>();
             mainWindow.Show();
         }
     }

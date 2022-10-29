@@ -12,7 +12,7 @@ namespace WpfDependencyApp.ViewModels
     {
         private readonly ILogger logger;
         private readonly IEmployeeRepository employeeRepository;
-        private ObservableCollection<Employee> employees;
+        private ObservableCollection<EmployeeViewModel> employees;
 
         public MainViewModel(ILogger<MainViewModel> logger, IEmployeeRepository employeeRepository)
         {
@@ -29,7 +29,8 @@ namespace WpfDependencyApp.ViewModels
                 this.logger.LogInformation("Trying to load employees...");
 
                 var employees = (await this.employeeRepository.GetEmployeesAsync()).ToList();
-                this.Employees = new ObservableCollection<Employee>(employees);
+                var employeeViewModels = employees.Select(e => new EmployeeViewModel(e)).ToList();
+                this.Employees = new ObservableCollection<EmployeeViewModel>(employeeViewModels);
 
                 this.logger.LogInformation($"Successfully loaded {employees.Count} employees");
             }
@@ -40,7 +41,7 @@ namespace WpfDependencyApp.ViewModels
             }
         }
 
-        public ObservableCollection<Employee> Employees
+        public ObservableCollection<EmployeeViewModel> Employees
         {
             get => this.employees;
             private set
