@@ -8,7 +8,7 @@ namespace WpfAutofac.Services
         {
         }
 
-        void IMessageService.Show(string message)
+        public void Show(string message)
         {
             MessageBox.Show(message);
         }
