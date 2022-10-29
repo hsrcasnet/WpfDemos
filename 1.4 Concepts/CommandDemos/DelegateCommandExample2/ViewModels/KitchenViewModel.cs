@@ -21,7 +21,7 @@ namespace DelegateCommandExample2.ViewModels
             get
             {
                 return this.cookDinnerCommand ?? (this.cookDinnerCommand = new DelegateCommand<string>(
-                    execute: async (msg) => await this.CookDinner(msg),
+                    execute: async (msg) => await this.CookDinnerAsync(msg),
                     canExecute: () => !this.IsCooking));
             }
         }
@@ -46,7 +46,7 @@ namespace DelegateCommandExample2.ViewModels
             }
         }
 
-        private async Task CookDinner(string message)
+        private async Task CookDinnerAsync(string message)
         {
             try
             {

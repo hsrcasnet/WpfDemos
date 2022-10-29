@@ -4,7 +4,7 @@ using DelegateCommandWith.ViewModels;
 using Moq;
 using Xunit;
 
-namespace DelegateCommandWith.Tests
+namespace DelegateCommandWith.Tests.ViewModels
 {
     public class KitchenViewModelTests
     {
@@ -17,7 +17,6 @@ namespace DelegateCommandWith.Tests
                 .ReturnsAsync(new MealDto { Id = 1, Name = "TestDöner" });
 
             var dialogServiceMock = new Mock<IDialogService>();
-            dialogServiceMock.Setup(d => d.ShowMessageBox(It.IsAny<string>()));
 
             var kitchenViewModel = new KitchenViewModel(kitchenServiceMock.Object, dialogServiceMock.Object);
 
@@ -28,7 +27,10 @@ namespace DelegateCommandWith.Tests
             Assert.False(kitchenViewModel.IsCooking);
 
             kitchenServiceMock.Verify(s => s.PrepareMeal(It.IsAny<int>()), Times.Once);
-            dialogServiceMock.Verify(d => d.ShowMessageBox(It.Is<string>(msg => msg == "Finished cooking: TestDöner is ready!")), Times.Once);
+            kitchenServiceMock.VerifyNoOtherCalls();
+
+            dialogServiceMock.Verify(d => d.ShowMessageBox("Finished cooking: TestDöner is ready!"), Times.Once);
+            dialogServiceMock.VerifyNoOtherCalls();
         }
     }
 }

@@ -7,10 +7,12 @@
     <StackPanel>
         <ComboBox x:Name="ComboBoxFontSizes">
             <sys:Double>-2</sys:Double>
+            <sys:Double>11</sys:Double>
             <sys:Double>14</sys:Double>
             <sys:Double>16</sys:Double>
             <sys:Double>32</sys:Double>
         </ComboBox>
+        
         <local:TextLabel FontSize="{Binding ElementName=ComboBoxFontSizes, Path=SelectedItem}"
                          Text="TextLabel with FontSize" />
     </StackPanel>

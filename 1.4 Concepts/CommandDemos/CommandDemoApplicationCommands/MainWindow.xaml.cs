@@ -61,7 +61,7 @@ namespace CommandDemoApplicationCommands
         {
             Debug.WriteLine($"Save command triggered from Source={e.Source.GetType().Name}");
 
-            if (currentFileName == null)
+            if (this.currentFileName == null)
             {
                 // Demo: Simple use case of SaveFileDialog
                 var saveFileDialog = new SaveFileDialog();
