@@ -5,7 +5,12 @@
     Title="MainWindow"
     Width="800"
     Height="450">
+    <Window.Resources>
+        <DataTemplate x:Key="CustomerTemplate">
+            <Label Content="{Binding Name}" Background="DarkCyan" Foreground="White" />
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
-        <ListBox ItemsSource="{Binding Customers}" />
+        <ListBox ItemsSource="{Binding Customers}" ItemTemplate="{StaticResource CustomerTemplate}" />
     </Grid>
 </Window>
