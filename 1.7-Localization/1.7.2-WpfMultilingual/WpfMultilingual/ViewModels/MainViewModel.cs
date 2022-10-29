@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
 using WpfMultilingual.Localization;
+using WpfMultilingual.Properties;
 
 namespace WpfMultilingual.ViewModels
 {
@@ -38,5 +40,19 @@ namespace WpfMultilingual.ViewModels
         }
 
         public IEnumerable<CultureInfo> Languages => this.translationManager.Languages;
+
+        // Demo: Strings with variables have to be composed in the viewmodel.
+        //public string MyProperty
+        //{
+        //    get
+        //    {
+        //        if (this.translationManager == null)
+        //        {
+        //            return null;
+        //        }
+
+        //        return string.Format(this.translationManager.Translate(nameof(Resources.CurrentTimeLabelText)), DateTime.Now.ToString("t"));
+        //    }
+        //}
     }
 }
