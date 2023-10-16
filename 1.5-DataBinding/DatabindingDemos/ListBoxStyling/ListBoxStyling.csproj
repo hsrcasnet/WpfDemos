@@ -12,7 +12,7 @@
     <ApplicationVersion>1.0.0.*</ApplicationVersion>
     <!-- Most people will use Publish dialog in Visual Studio to increment this -->
     <BootstrapperEnabled>false</BootstrapperEnabled>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
