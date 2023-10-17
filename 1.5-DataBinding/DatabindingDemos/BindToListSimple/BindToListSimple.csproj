@@ -68,7 +68,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PeopleFactory.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="PersonFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
