@@ -9,11 +9,6 @@ namespace DataBindingToObjects
         private int age;
         private string occupation;
 
-        // Each property calls the OnPropertyChanged method
-        // when its value changed, and each property that 
-        // affects the Person's Description, also calls the 
-        // OnPropertyChanged method for the Description property.
-
         public string FirstName
         {
             get { return this.firstName; }
@@ -22,6 +17,8 @@ namespace DataBindingToObjects
                 if (this.firstName != value)
                 {
                     this.firstName = value;
+
+                    // Raise PropertyChanged event for all bindings to "FirstName" and "Description"
                     this.OnPropertyChanged("FirstName");
                     this.OnPropertyChanged("Description");
                 }
@@ -36,7 +33,9 @@ namespace DataBindingToObjects
                 if (this.lastName != value)
                 {
                     this.lastName = value;
-                    this.OnPropertyChanged(nameof(this.LastName)); // Hint: Use nameof() to get compile-time safe property updates
+
+                    // Hint: Use nameof() to get compile-time safe property updates
+                    this.OnPropertyChanged(nameof(this.LastName));
                     this.OnPropertyChanged(nameof(this.Description));
                 }
             }
@@ -50,8 +49,8 @@ namespace DataBindingToObjects
                 if (this.age != value)
                 {
                     this.age = value;
-                    this.OnPropertyChanged("Age");
-                    this.OnPropertyChanged("Description");
+                    this.OnPropertyChanged(nameof(this.Age));
+                    this.OnPropertyChanged(nameof(this.Description));
                 }
             }
         }
@@ -64,8 +63,8 @@ namespace DataBindingToObjects
                 if (this.occupation != value)
                 {
                     this.occupation = value;
-                    this.OnPropertyChanged("Occupation");
-                    this.OnPropertyChanged("Description");
+                    this.OnPropertyChanged(nameof(this.Occupation));
+                    this.OnPropertyChanged(nameof(this.Description));
                 }
             }
         }
@@ -89,11 +88,8 @@ namespace DataBindingToObjects
 
         private void OnPropertyChanged(string propertyName)
         {
-            if (this.PropertyChanged != null)
-            {
-                // Raise the PropertyChanged event
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+            // Raise the PropertyChanged event
+            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         #endregion
