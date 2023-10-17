@@ -19,6 +19,7 @@ namespace SortingFilteringGrouping
             var customers = CustomersFactory.GetCustomers().ToList();
             this.Customers = new ObservableCollection<Customer>(customers);
 
+            // Setup a CollectionView based on the ObservableCollection<Customer>
             this.CustomerView = CollectionViewSource.GetDefaultView(this.Customers);
 
             // Sorting
