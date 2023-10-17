@@ -6,7 +6,7 @@ namespace BindToListSimple
     {
         public MainWindow()
         {
-            this.DataContext = PersonFactory.GetPeople();
+            this.DataContext = PersonFactory.GetPersons();
             this.InitializeComponent();
         }
     }

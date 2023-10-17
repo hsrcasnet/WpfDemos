@@ -4,7 +4,7 @@ namespace BindToListSimple
 {
     public static class PersonFactory
     {
-        public static IEnumerable<Person> GetPeople()
+        public static IEnumerable<Person> GetPersons()
         {
             yield return new Person()
             {
