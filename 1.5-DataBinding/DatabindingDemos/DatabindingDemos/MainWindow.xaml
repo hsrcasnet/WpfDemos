@@ -6,14 +6,17 @@
     <StackPanel>
         <Slider Name="slider" Margin="4" Interval="1" TickFrequency="1" 
                 IsSnapToTickEnabled="True" Minimum="0" Maximum="100"
-                  ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Value}"/>
+                ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Value}"/>
         <StackPanel Orientation="Horizontal" >
-            <TextBlock Width="Auto" HorizontalAlignment="Left" Margin="4"
-                        Text="The value property of the slider is:" />
-            <TextBox Width="40" HorizontalAlignment="Center" Margin="4"
-                        Text="{Binding ElementName=slider, Path=Value, Mode=TwoWay}" />
-            <TextBox Width="40" HorizontalAlignment="Center" Margin="4"
-                        Text="{Binding ElementName=slider, Path=Value, Mode=OneWay}" />
+            <TextBlock 
+                Width="Auto" HorizontalAlignment="Left" Margin="4"
+                Text="The value property of the slider is:" />
+            <TextBox
+                Width="40" HorizontalAlignment="Center" Margin="4"
+                Text="{Binding ElementName=slider, Path=Value, Mode=TwoWay}" />
+            <TextBox
+                Width="40" HorizontalAlignment="Center" Margin="4"
+                Text="{Binding ElementName=slider, Path=Value, Mode=OneWay}" />
         </StackPanel>
     </StackPanel>
 </Window>
