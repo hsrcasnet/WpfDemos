@@ -5,7 +5,7 @@ using System.Windows.Data;
 
 namespace WpfValueConversion.Converters
 {
-    public class DatetimeToStringConverter : IValueConverter
+    public class DateTimeToStringConverter : IValueConverter
     {
         /// <summary>
         /// Any string format which applies to DateTime values.

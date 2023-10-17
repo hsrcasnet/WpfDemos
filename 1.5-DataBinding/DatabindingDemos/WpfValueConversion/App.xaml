@@ -12,7 +12,7 @@
                 FalseColor="Red"
                 TrueColor="Green" />
 
-            <converters:DatetimeToStringConverter x:Key="DatetimeToStringConverter" Format="D" />
+            <converters:DateTimeToStringConverter x:Key="DateTimeToStringConverter" Format="D" />
 
             <converters:DebugConverter x:Key="DebugConverter" />
 

@@ -23,13 +23,14 @@
         <CheckBox
             Grid.Row="0" Grid.Column="1" Margin="4"
             IsChecked="{Binding IsLoggedIn, Mode=TwoWay}"
-            Background="{Binding IsLoggedIn, Converter={StaticResource BoolToRedGreenColorBrushConverter}}"/>
+            Background="{Binding IsLoggedIn, Converter={StaticResource BoolToRedGreenColorBrushConverter}}"
+            HorizontalAlignment="Left"/>
 
         <TextBlock
             Grid.Row="1" Grid.Column="0" Margin="4"
             Text="Retirement Date" />
         <TextBlock
             Grid.Row="1" Grid.Column="1" Margin="4"
-            Text="{Binding RetirementDate, Converter={StaticResource DatetimeToStringConverter}}" />
+            Text="{Binding RetirementDate, Converter={StaticResource DateTimeToStringConverter}}" />
     </Grid>
 </Window>
