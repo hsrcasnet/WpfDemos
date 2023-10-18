@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29411.108
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepPropDemo4", "DepPropDemo\DepPropDemo4.csproj", "{1C12290D-66D5-44D7-8B8C-18F6809F0EF0}"
 EndProject
@@ -31,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttachedPropertiesDemo2", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAttachedProperties2", "CustomAttachedProperties2\CustomAttachedProperties2.csproj", "{6539BA96-E7F6-47F3-AB4B-CEA2EABA4923}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAttachedProperties3", "CustomAttachedProperties3\CustomAttachedProperties3.csproj", "{0C7101ED-872E-491A-A547-D71140404E92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDepPropertyAddressControl", "CustomAttachedProperties3\CustomDepPropertyAddressControl.csproj", "{0C7101ED-872E-491A-A547-D71140404E92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

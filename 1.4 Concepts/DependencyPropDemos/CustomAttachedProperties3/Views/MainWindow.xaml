@@ -1,0 +1,27 @@
+﻿<Window x:Class="CustomAttachedProperties3.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:uc="clr-namespace:CustomAttachedProperties3.UserControls"
+        mc:Ignorable="d"
+        Title="{Binding Username, StringFormat='Logged in as: {0}'}" Height="450" Width="800">
+
+    <StackPanel Orientation="Vertical" Margin="10">
+        <!--Demo: Use multiple instance of AddressUserControl and bind them to different addresses-->
+        <uc:AddressUserControl 
+            Title="Invoice Address"
+            Street="{Binding InvoiceAddress.Street}" 
+            ZipCode="{Binding InvoiceAddress.ZipCode}"
+            Place="{Binding InvoiceAddress.Place}"
+            Padding="0, 0, 0, 20"/>
+
+        <!--Demo: Set DataContext to ShippingAddress-->
+        <uc:AddressUserControl 
+            DataContext="{Binding ShippingAddress}"
+            Title="Shipping Address"
+            Street="{Binding Street}" 
+            ZipCode="{Binding ZipCode}"
+            Place="{Binding Place}" />
+    </StackPanel>
+</Window>
