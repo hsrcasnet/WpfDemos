@@ -1,9 +1,12 @@
 ﻿<Application x:Class="CustomAttachedProperties2.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:CustomAttachedProperties2"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+        
     </Application.Resources>
 </Application>
