@@ -71,7 +71,8 @@ namespace DependencyPropertySimple
                     FlowDirection.LeftToRight,
                     new Typeface("Arial"),
                     this.FontSize,
-                    Brushes.Black);
+                    Brushes.Black,
+                    pixelsPerDip: 1);
         }
 
         protected override void OnRender(DrawingContext drawingContext)
