@@ -1,5 +1,3 @@
-using System;
-using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -15,19 +13,19 @@ namespace RoutedEvents
 
         public Menu()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
             // Get the current button.
-            Button cmd = (Button)e.OriginalSource;
+            var cmd = (Button)e.OriginalSource;
 
             // Create an instance of the window named
             // by the current button.
-            Type type = this.GetType();
-            Assembly assembly = type.Assembly;
-            Window win = (Window)assembly.CreateInstance(
+            var type = this.GetType();
+            var assembly = type.Assembly;
+            var win = (Window)assembly.CreateInstance(
                 type.Namespace + "." + cmd.Content);
 
             // Show the window.

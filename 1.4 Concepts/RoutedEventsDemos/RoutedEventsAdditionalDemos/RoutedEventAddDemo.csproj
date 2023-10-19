@@ -89,10 +89,6 @@
       <SubType>Code</SubType>
       <DependentUpon>DragAndDrop.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Focus.xaml.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>Focus.xaml</DependentUpon>
-    </Compile>
     <Compile Include="KeyModifiers.xaml.cs">
       <SubType>Code</SubType>
       <DependentUpon>KeyModifiers.xaml</DependentUpon>
@@ -152,12 +148,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="DragAndDrop.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Focus.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

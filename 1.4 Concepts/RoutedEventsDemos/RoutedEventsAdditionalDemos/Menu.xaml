@@ -10,7 +10,6 @@
         <Button>KeyPressEvents</Button>
         <Button>OnlyNumbers</Button>
         <Button>KeyModifiers</Button>
-        <Button>Focus</Button>
         <Button>MousePosition</Button>
         <Button>DragAndDrop</Button>
       </StackPanel>
