@@ -20,18 +20,17 @@ namespace RoutedClickEvent
             remove => this.RemoveHandler(ClickEvent, value);
         }
 
-        protected virtual void OnClick()
-        {
-            //Raise the event
-            var eventArgs = new RoutedEventArgs(SimpleButton.ClickEvent);
-            this.RaiseEvent(eventArgs);
-        }
-
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
         {
             base.OnMouseLeftButtonDown(e);
             e.Handled = true;
-            this.OnClick();
+            this.RaiseClickEvent();
+        }
+
+        private void RaiseClickEvent()
+        {
+            var eventArgs = new RoutedEventArgs(SimpleButton.ClickEvent);
+            this.RaiseEvent(eventArgs);
         }
 
         protected override Size MeasureOverride(Size availableSize)
@@ -54,7 +53,10 @@ namespace RoutedClickEvent
         {
             // Damit der Button erkennbar ist, wird hier ein einfaches graues Rechteck mit einem schwarzen Rand gezeichnet.
             base.OnRender(drawingContext);
-            drawingContext.DrawRectangle(Brushes.LightGray, new Pen(Brushes.Black, .5), new Rect(this.RenderSize));
+            drawingContext.DrawRectangle(
+                Brushes.LightGray,
+                new Pen(Brushes.Black, .5), 
+                new Rect(this.RenderSize));
         }
     }
 }
