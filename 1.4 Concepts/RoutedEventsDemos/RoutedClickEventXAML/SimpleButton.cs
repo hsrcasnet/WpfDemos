@@ -16,8 +16,8 @@ namespace RoutedClickEvent
 
         public event RoutedEventHandler Click
         {
-            add { this.AddHandler(ClickEvent, value); }
-            remove { this.RemoveHandler(ClickEvent, value); }
+            add => this.AddHandler(ClickEvent, value);
+            remove => this.RemoveHandler(ClickEvent, value);
         }
 
         protected virtual void OnClick()

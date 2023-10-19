@@ -1,19 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29411.108
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutedEvents", "routedEvents\RoutedEvents.csproj", "{5FA423BA-9126-4DAC-A400-3F38CEE20A03}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFHelpers", "WPFHelpers\WPFHelpers.csproj", "{686216BB-13EF-4CD5-9E5D-741FD660E807}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutedClickEventNoXAML", "RoutedClickEventNoXAML\RoutedClickEventNoXAML.csproj", "{BAEBB8E6-6162-4C80-A7DA-B37CE8ECBA63}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutedEventAddDemo", "RoutedEventsAdditionalDemos\RoutedEventAddDemo.csproj", "{63C2196A-B88B-45C5-9F34-EF80E4176322}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutedClickEventImplXAML", "RoutedClickEventXAML\RoutedClickEventImplXAML.csproj", "{D5D84F97-8887-42A3-B699-53B67EE5F0A9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RoutedEventImpl", "RoutedEventImpl", "{B1EB64B5-8FAE-4FDF-B7EE-3043FC0511F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnooperLib", "SnooperLib\SnooperLib.csproj", "{EBA34EE6-939C-4194-9097-C2B9A96DEF4B}"
 EndProject
@@ -35,10 +31,6 @@ Global
 		{686216BB-13EF-4CD5-9E5D-741FD660E807}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{686216BB-13EF-4CD5-9E5D-741FD660E807}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{686216BB-13EF-4CD5-9E5D-741FD660E807}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BAEBB8E6-6162-4C80-A7DA-B37CE8ECBA63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BAEBB8E6-6162-4C80-A7DA-B37CE8ECBA63}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BAEBB8E6-6162-4C80-A7DA-B37CE8ECBA63}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BAEBB8E6-6162-4C80-A7DA-B37CE8ECBA63}.Release|Any CPU.Build.0 = Release|Any CPU
 		{63C2196A-B88B-45C5-9F34-EF80E4176322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{63C2196A-B88B-45C5-9F34-EF80E4176322}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63C2196A-B88B-45C5-9F34-EF80E4176322}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -62,10 +54,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{BAEBB8E6-6162-4C80-A7DA-B37CE8ECBA63} = {B1EB64B5-8FAE-4FDF-B7EE-3043FC0511F2}
-		{D5D84F97-8887-42A3-B699-53B67EE5F0A9} = {B1EB64B5-8FAE-4FDF-B7EE-3043FC0511F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7EDA5730-5495-480E-A41C-3ABAA2F438DC}
