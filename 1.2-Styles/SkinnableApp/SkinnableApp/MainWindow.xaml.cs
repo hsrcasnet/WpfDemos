@@ -19,12 +19,12 @@ namespace SkinnableApp
             }
 
             // Load the default skin.
-            Grid mainGrid = this.Content as Grid;
-            MenuItem item = mainGrid.ContextMenu.Items[0] as MenuItem;
+            var mainGrid = this.Content as Grid;
+            var item = mainGrid.ContextMenu.Items[0] as MenuItem;
             this.ApplySkinFromMenuItem(item);
         }
 
-        void OnMenuItemClick(object sender, RoutedEventArgs e)
+        private void OnMenuItemClick(object sender, RoutedEventArgs e)
         {
             var item = e.OriginalSource as MenuItem;
 
