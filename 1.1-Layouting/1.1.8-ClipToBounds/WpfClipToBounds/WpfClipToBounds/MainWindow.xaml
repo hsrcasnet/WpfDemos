@@ -13,9 +13,9 @@
             then the grapics/content inside the layout will overflow from the Canvas Layout.
             -->
             <Canvas Height="120" ClipToBounds="False" Background="LightGray">
-                <Ellipse Fill="Red" Height="100" Width="100" Canvas.Top="-20"></Ellipse>
-                <Ellipse Fill="Green" Height="100" Width="100" Canvas.Left="40" Canvas.Top="40" Canvas.ZIndex="1"></Ellipse>
-                <Ellipse Fill="Blue" Height="100" Width="100" Canvas.Top="-30" Canvas.Left="70"></Ellipse>
+                <Ellipse Fill="Red" Height="100" Width="100" Canvas.Top="-20" />
+                <Ellipse Fill="Green" Height="100" Width="100" Canvas.Left="40" Canvas.Top="40" Canvas.ZIndex="1" />
+                <Ellipse Fill="Blue" Height="100" Width="100" Canvas.Top="-30" Canvas.Left="70" />
             </Canvas>
         </TabItem>
         <TabItem Header="Canvas ClipToBounds=&quot;True&quot;" >
