@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using DataTemplateSelectorDemo.ViewModels;
 
 namespace DataTemplateSelectorDemo
 {
