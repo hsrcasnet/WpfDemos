@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DataTemplateSelectorDemo
+namespace DataTemplateSelectorDemo.ViewModels
 {
     public class MainViewModel
     {
