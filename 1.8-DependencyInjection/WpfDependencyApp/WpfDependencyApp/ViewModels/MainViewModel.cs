@@ -3,7 +3,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using Microsoft.Extensions.Logging;
-using WpfDependencyApp.Model;
 using WpfDependencyApp.Services;
 
 namespace WpfDependencyApp.ViewModels
@@ -12,9 +11,12 @@ namespace WpfDependencyApp.ViewModels
     {
         private readonly ILogger logger;
         private readonly IEmployeeRepository employeeRepository;
+
         private ObservableCollection<EmployeeViewModel> employees;
 
-        public MainViewModel(ILogger<MainViewModel> logger, IEmployeeRepository employeeRepository)
+        public MainViewModel(
+            ILogger<MainViewModel> logger,
+            IEmployeeRepository employeeRepository)
         {
             this.logger = logger;
             this.employeeRepository = employeeRepository;
