@@ -15,9 +15,20 @@ namespace WpfDependencyApp
         {
             var serviceCollection = new ServiceCollection();
 
-            // Register dependencies
-            serviceCollection.AddLogging(configure => configure.AddDebug());
+            // Configure logging
+            serviceCollection.AddLogging(c =>
+            {
+                // Clear all default logging providers
+                //c.ClearProviders();
 
+                // Add debug console logging
+                c.AddDebug();
+
+                // Integrate logging frameworks such as NLog, SeriLog or log4net
+                //c.AddNLog();
+            });
+
+            // Register services in DI container
             var useMockServices = true;
             if (useMockServices)
             {
@@ -28,15 +39,17 @@ namespace WpfDependencyApp
                 serviceCollection.AddSingleton<IEmployeeRepository, EmployeeRepositoryEF>();
             }
 
+            // Register pages and viewmodels
             serviceCollection.AddScoped<MainViewModel>();
             serviceCollection.AddScoped<MainWindow>();
 
-            // Create DI container
+            // Finally, create DI service provider
             this.serviceProvider = serviceCollection.BuildServiceProvider();
         }
 
         private void OnStartup(object sender, StartupEventArgs e)
         {
+            // Resolve the root object of this application, MainWindow
             var mainWindow = this.serviceProvider.GetRequiredService<MainWindow>();
             mainWindow.Show();
         }
