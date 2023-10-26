@@ -1,7 +1,9 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using WpfDependencyApp.Services;
+using WpfDependencyApp.Services.Logging;
 using WpfDependencyApp.ViewModels;
 using WpfDependencyApp.Views;
 
@@ -45,6 +47,12 @@ namespace WpfDependencyApp
 
             // Finally, create DI service provider
             this.serviceProvider = serviceCollection.BuildServiceProvider();
+
+            this.serviceProvider.UsePresentationTraceSourcesLogging(o =>
+            {
+                o.SourceLevels = SourceLevels.Warning | SourceLevels.Error;
+                o.TraceSources.FreezableSource.IsEnabled = false;
+            });
         }
 
         private void OnStartup(object sender, StartupEventArgs e)
