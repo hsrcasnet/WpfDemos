@@ -1,0 +1,45 @@
+<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="http://prismlibrary.com/"
+    x:Class="PrismSampleApp.Views.SubSettingsView"
+    d:DesignHeight="350"
+    d:DesignWidth="500"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    mc:Ignorable="d">
+    <DockPanel>
+        <StackPanel Background="LightGoldenrodYellow" DockPanel.Dock="Top">
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Content="Back" Command="{Binding NavigateBackCommand}" />
+                <TextBlock
+                    Grid.Column="2"
+                    Margin="5"
+                    VerticalAlignment="Center"
+                    FontWeight="Bold"
+                    Text="{Binding Title}" />
+            </Grid>
+        </StackPanel>
+
+        <ScrollViewer Margin="5">
+            <StackPanel>
+                <Label Content="Our passed-in parameters" FontWeight="Bold" />
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Key 1 - Text:" />
+                    <Label Content="{Binding MessageText}" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Key 2 - Number:" />
+                    <Label Content="{Binding MessageNumber}" />
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </DockPanel>
+</UserControl>
