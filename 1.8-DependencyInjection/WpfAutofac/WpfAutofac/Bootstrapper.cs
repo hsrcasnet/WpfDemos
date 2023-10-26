@@ -42,7 +42,10 @@ namespace WpfAutofac
                 return;
             }
 
+            // Create DI container builder
             var builder = new ContainerBuilder();
+            
+            // Register services, views, viewmodels
             var assemblies = new[] { Assembly.GetExecutingAssembly() };
 
             builder.RegisterAssemblyTypes(assemblies)
@@ -60,6 +63,7 @@ namespace WpfAutofac
                 .AsImplementedInterfaces()
                 .AsSelf();
 
+            // Finally, build the DI container
             container = builder.Build();
         }
 
