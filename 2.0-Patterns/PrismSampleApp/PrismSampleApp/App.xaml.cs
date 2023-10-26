@@ -58,6 +58,7 @@ namespace PrismSampleApp
             regionManager.RegisterViewWithRegion(RegionNames.ContentRegion, typeof(DashboardView));
             regionManager.RegisterViewWithRegion(RegionNames.SidebarRegion, typeof(SidebarView));
 
+            // This finally calls MainWindow.Show();
             base.OnInitialized();
         }
     }
