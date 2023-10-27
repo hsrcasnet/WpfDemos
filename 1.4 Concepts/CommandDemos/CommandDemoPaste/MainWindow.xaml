@@ -20,8 +20,8 @@
         </Menu>
 
         <TextBox Grid.Row="1" 
-                 Name="TextBoxEditor1"/>
+                 Name="TextBoxEditor1" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" />
         <TextBox Grid.Row="2" 
-                 Name="TextBoxEditor2" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
+                 Name="TextBoxEditor2" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" />
     </Grid>
 </Window>
