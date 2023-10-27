@@ -46,8 +46,12 @@ namespace CommandDemoApplicationCommands
             Debug.WriteLine($"Open command triggered from Source={e.Source.GetType().Name}");
 
             // Demo: Simple use case of OpenFileDialog
-            var openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = TextFilesFilter;
+            var openFileDialog = new OpenFileDialog
+            {
+                Filter = TextFilesFilter,
+                InitialDirectory = @"C:\temp\"
+            };
+
             var result = openFileDialog.ShowDialog();
             if (result == true)
             {
@@ -64,8 +68,11 @@ namespace CommandDemoApplicationCommands
             if (this.currentFileName == null)
             {
                 // Demo: Simple use case of SaveFileDialog
-                var saveFileDialog = new SaveFileDialog();
-                saveFileDialog.Filter = TextFilesFilter;
+                var saveFileDialog = new SaveFileDialog
+                {
+                    Filter = TextFilesFilter
+                };
+
                 var result = saveFileDialog.ShowDialog();
                 if (result == true)
                 {
