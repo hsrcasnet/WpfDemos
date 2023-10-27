@@ -5,9 +5,9 @@
 
     <StackPanel TextElement.FontSize="30" 
                 TextElement.FontStyle="Italic">
-        <Button Content="Button"/>
-        <CheckBox Content="CheckBox"/>
-        <TextBox Text="TextBox"/>
-        <Label Content="Label"/>
+        <Button Content="Button" />
+        <CheckBox Content="CheckBox" />
+        <TextBox Text="TextBox" />
+        <Label Content="Label" />
     </StackPanel>
 </Window>

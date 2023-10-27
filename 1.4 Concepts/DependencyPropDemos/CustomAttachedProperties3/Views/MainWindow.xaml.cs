@@ -7,6 +7,7 @@ namespace CustomAttachedProperties3.Views
         public MainWindow()
         {
             this.InitializeComponent();
+
             this.DataContext = new UserProfileViewModel
             {
                 Username = "thomasgalliker",
