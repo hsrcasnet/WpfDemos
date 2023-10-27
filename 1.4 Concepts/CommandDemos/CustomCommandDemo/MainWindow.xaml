@@ -15,7 +15,7 @@
     </Window.Resources>
 
     <Window.CommandBindings>
-        <CommandBinding Command="local:DataCommands.Requery" Executed="RequeryCommand" />
+        <CommandBinding Command="local:DataCommands.Requery" Executed="ExecuteRequery" />
     </Window.CommandBindings>
 
     <StackPanel>

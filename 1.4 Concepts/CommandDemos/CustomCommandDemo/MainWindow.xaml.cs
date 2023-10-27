@@ -10,7 +10,7 @@ namespace CustomCommandDemo
             this.InitializeComponent();
         }
 
-        private void RequeryCommand(object sender, ExecutedRoutedEventArgs e)
+        private void ExecuteRequery(object sender, ExecutedRoutedEventArgs e)
         {
             MessageBox.Show($"RequeryCommand executed by Source={e.Source.GetType().Name}");
         }
