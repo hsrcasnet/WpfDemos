@@ -7,7 +7,7 @@
     <StackPanel>
         <Button Content="Cook Dinner" IsEnabled="{Binding IsCooking, Converter={StaticResource BoolInverter}}">
             <i:Interaction.Triggers>
-                <i:EventTrigger EventName="Click">
+                <i:EventTrigger EventName="MouseEnter">
                     <i:InvokeCommandAction Command="{Binding CookDinnerCommand}"
                                            CommandParameter="Döner"/>
                 </i:EventTrigger>
