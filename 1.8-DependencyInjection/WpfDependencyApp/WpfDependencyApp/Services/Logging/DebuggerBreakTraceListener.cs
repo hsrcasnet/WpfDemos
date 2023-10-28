@@ -10,10 +10,10 @@ namespace WpfDependencyApp.Services.Logging
 
         public override void WriteLine(string message)
         {
-            if (Debugger.IsAttached)
-            {
-                Debugger.Break();
-            }
+            //if (Debugger.IsAttached)
+            //{
+            //    Debugger.Break();
+            //}
         }
     }
 }
