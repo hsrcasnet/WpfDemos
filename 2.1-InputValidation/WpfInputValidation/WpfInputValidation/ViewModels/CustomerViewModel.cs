@@ -75,8 +75,7 @@ namespace WpfInputValidation.ViewModels
                 }
             }
 
-            var isValid = !propertyErrors.Any();
-            if (!isValid)
+            if (propertyErrors.Any())
             {
                 /* Update the collection in the dictionary returned by the GetErrors method */
                 this.validationErrors[propertyName] = propertyErrors;
