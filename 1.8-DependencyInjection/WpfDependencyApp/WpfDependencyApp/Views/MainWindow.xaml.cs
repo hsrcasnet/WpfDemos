@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Windows;
-using Microsoft.Extensions.Logging;
-using WpfDependencyApp.Services;
+﻿using System.Windows;
 using WpfDependencyApp.ViewModels;
 
 namespace WpfDependencyApp.Views
