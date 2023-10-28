@@ -20,9 +20,9 @@ namespace DelegateCommandExample2.ViewModels
         {
             get
             {
-                return this.cookDinnerCommand ?? (this.cookDinnerCommand = new DelegateCommand<string>(
+                return this.cookDinnerCommand ??= new DelegateCommand<string>(
                     execute: async (msg) => await this.CookDinnerAsync(msg),
-                    canExecute: () => !this.IsCooking));
+                    canExecute: () => !this.IsCooking);
             }
         }
 
